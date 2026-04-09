@@ -1,6 +1,6 @@
 items:
-- name: About
-  href: about/
+- name: Getting Started
+  href: getting-started/
 - name: Assets
   href: assets/
 - name: Code

@@ -27,8 +27,8 @@ Our intention is to let you export the things that you make in our engine and re
 
 Issues and feature suggestions should be posted in [the sbox-public repo](https://github.com/Facepunch/sbox-public).
 
-Please see [Reporting Errors](/about/getting-started/reporting-errors.md).
+Please see [Reporting Errors](/getting-started/reporting-errors.md).
 
 ## Getting Started
 
-Please see [First Steps](/about/getting-started/first-steps.md).
+Please see [First Steps](/getting-started/first-project.md).

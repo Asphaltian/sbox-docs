@@ -33,7 +33,7 @@ It would have been cheaper and easier to do this all on Unity or UE, but we woul
 
 Yes. It's integral. We owe our entire business to the fact that Valve let us monetize. 
 
-Right now there are two ways for our creators to make money. You can [make a cosmetic item](https://sbox.game/ugc/clothing?sort=thumbsup), which then goes for sale in game and you get a cut of it via Steam Workshop. Or you can make a game and [get a cut of the playfund](https://sbox.game/dev/doc/about/getting-started/monetization/).
+Right now there are two ways for our creators to make money. You can [make a cosmetic item](https://sbox.game/ugc/clothing?sort=thumbsup), which then goes for sale in game and you get a cut of it via Steam Workshop. Or you can make a game and [get a cut of the playfund](https://sbox.game/dev/doc/getting-started/monetization/).
 
 We want to be careful about pushing further. We want you to be able to charge for whatever you want, but we also don't want everything to become pay-to-win like on other platforms.
 
