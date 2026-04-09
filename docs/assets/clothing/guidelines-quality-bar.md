@@ -397,7 +397,7 @@ We have supplied a **how-to guide** that runs through morphing clothing to human
 
 We understand this is a lot to take in, to read through; there are a lot of requirements to follow, and a lot of information to digest.
 
-If you find yourself lost, are in need advice, or seek an answer to a question, you can find help in our community Discord server, which can be joined at [**https://discord.com/invite/sbox**](https://discord.com/invite/sbox)**.**
+If you find yourself lost, are in need advice, or seek an answer to a question, you can find help in the [**offical s&box Discord**](https://discord.com/invite/sbox) or the [**community cosmetic Discord**](https://discord.com/invite/4jr2mn88).
 
 This is one of the best ways spaces to reach out to other creators and the s&box development team.
 
