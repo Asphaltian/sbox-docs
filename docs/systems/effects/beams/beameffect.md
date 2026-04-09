@@ -12,7 +12,7 @@ With the BeamEffect you have basically got a LineRenderer that can be animated. 
 It also complies with [TemporaryEffect](/scene/components/reference/temporaryeffect.md), which means that it's perfect for creating things like tracers or lasers.
 
 
-[sbox.2025.06.23.11.14.53.mp4 1280x720](./images/sbox-2025-06-23-11-14-53.mp4)
+[BeamEffect animation demo](./images/beam-effect-demo.mp4)
 
 ## Follow Points
 

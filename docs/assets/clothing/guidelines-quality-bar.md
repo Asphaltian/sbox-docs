@@ -26,7 +26,7 @@ Many of these guidelines cover case-by-case situations. If you need a direct ref
 ## Triangle count  🔢
 
 
-[ 1280x720](./images/8b14905a-478d-468d-8c4c-8bbed71801ac.png)
+[Checking clothing triangle count](./images/8b14905a-478d-468d-8c4c-8bbed71801ac.png)
 
 
 Checking over examples of existing clothing, you may be able to get a rough estimate of a clothing asset's triangle count. 'Common sense' should help guide you, but here are some examples of triangle counts across our own assets.
@@ -51,7 +51,7 @@ Further information on this specific topic can be found in the [Clothing Topolog
 ## Topology 🕸️
 
 
-[ 1280x720](./images/709703ab-a4ba-4492-a5a2-e1f8a0e46790.png)
+[Good vs bad topology](./images/709703ab-a4ba-4492-a5a2-e1f8a0e46790.png)
 
 
  ![](./images/topology-1.png " =1806x1110")
@@ -306,7 +306,7 @@ When we use this level, we use the same mesh as LOD3, but with only one material
 Here's an example with one of our hoodies.
 
 
-[ 1280x720](./images/104ac414-62da-46ea-9b9e-225996379595.png)
+[Clothing LOD level example](./images/104ac414-62da-46ea-9b9e-225996379595.png)
 
 
 

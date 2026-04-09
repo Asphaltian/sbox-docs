@@ -29,7 +29,7 @@ A time range selection describes how much a modification affects each moment in 
 * Press *Esc* to clear the selection
 
 
-[sbox-dev_Ut0CxWvmsX.mp4 1170x462](./images/sbox-dev-ut0cxwvmsx.mp4)
+[Creating time range selections](./images/creating-time-range-selections.mp4)
 
 
 You can change the easing type of the fade in / out sections with the corresponding button in the toolbar, or pressing number keys when mousing over those sections. The shape of the top / bottom of the time selection UI shows what the current easing function looks like.
@@ -42,7 +42,7 @@ You can change the easing type of the fade in / out sections with the correspond
 After selecting a time range, you can manipulate the properties of your movie's tracks. Only the selected time range will be affected, with the changes ramping up and down inside the fade in / out sections of your selection.
 
 
-[sbox-dev_6msI738i7O.mp4 1170x884](./images/sbox-dev-6msi738i7o.mp4)
+[Applying track modifications](./images/applying-track-modifications.mp4)
 
 The selection will turn yellow to show a modification is in progress. At this point you can freely tweak the time selection, and when you're happy hit *Enter* or click the green tick to commit the change.
 
@@ -72,4 +72,4 @@ The context menu for time selections has a ton of extra editing actions.
 When pasting a time selection, you can additively layer track data over the existing animation. This is enabled by default, can can be disabled by clicking the *Additive* button in the toolbar while modifications are active.
 
 
-[sbox-dev_d1eWXxyK4J.mp4 1052x1062](./images/sbox-dev-d1ewxxyk4j.mp4)
+[Additive editing with layers](./images/additive-editing-with-layers.mp4)

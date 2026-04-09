@@ -22,7 +22,7 @@ There's three ways to create a keyframe for a property track:
 
   \
 
-[sbox-dev_iAf40itXRB.mp4 1008x896](./images/sbox-dev-iaf40itxrb.mp4)
+[Creating keyframes in timeline](./images/creating-keyframes-in-timeline.mp4)
 
 
 :::tip
@@ -40,12 +40,12 @@ Each keyframe can choose between three different interpolation modes:
 * Cubic - move along a smooth spline connecting keyframes
 
 
-[sbox-dev_6y9byeniJF.mp4 1008x896](./images/sbox-dev-6y9byenijf.mp4)
+[Keyframe interpolation modes](./images/keyframe-interpolation-modes.mp4)
 
 You can combine different modes for neighbouring keyframes to make animations ease in or out.
 
 
-[sbox-dev_ThsOOsr9bq.mp4 1008x896](./images/sbox-dev-thsoosr9bq.mp4)
+[Combining easing keyframes](./images/combining-easing-keyframes.mp4)
 
 
 ## Automatic Track Creation
@@ -53,4 +53,4 @@ You can combine different modes for neighbouring keyframes to make animations ea
 For convenience, you can enable this mode to create tracks whenever you touch something in the scene. This helps the most when you're changing lots of properties on many objects, so you don't have to manually created dozens of tracks.
 
 
-[sbox-dev_yRfCXPdJl1.mp4 1482x896](./images/sbox-dev-yrfcxpdjl1.mp4)
+[Automatic track creation](./images/automatic-track-creation.mp4)

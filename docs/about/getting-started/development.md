@@ -39,4 +39,4 @@ GameObjects can contain Components. A component provides modular functionality t
 The game developer ultimately creates games by programming new Components and configuring scenes with GameObjects and Components.
 
 
-[Prickly Pete running around with a knife 2346x1134](./images/prickly-pete-running-around-with-a-knife.mp4)
+[Prickly Pete running around with a knife](./images/prickly-pete-running-around-with-a-knife.mp4)

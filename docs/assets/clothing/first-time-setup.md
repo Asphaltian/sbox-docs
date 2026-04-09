@@ -9,7 +9,7 @@ updated: 2025-01-14
 
 ## First time Opening S&box 📦
 
-[ 1280x720](./images/e64ec000-0b7a-4e14-b1f6-9c6893aacdd6.png)
+[Opening S&box for first time](./images/e64ec000-0b7a-4e14-b1f6-9c6893aacdd6.png)
 
  ![](./images/first-time-opening-s-box-1.png "left-50 =535x359")
 
@@ -38,7 +38,7 @@ You will **never** need to add or adjust files within the core folders (e.g. the
 ## Grabbing Citizen Files 🤏
 
 
-[setup2.mp4 1280x720](./images/ac3fd166-4c4b-48a3-aafc-c2e87c89b2d6.png)
+[Locating citizen asset files](./images/ac3fd166-4c4b-48a3-aafc-c2e87c89b2d6.png)
 
 Find useful files in `Steam\steamapps\common\sbox\addons\citizen\Assets\models\citizen`
 

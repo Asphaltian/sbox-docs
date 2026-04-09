@@ -33,7 +33,7 @@ Both the file menu and timeline context menus have an *Import Movie* option. Aft
 Sequence blocks can be moved and resized with the mouse. Multi-selecting sequence blocks lets you move them together, and if their starts or ends align you can drag those together too.
 
 
-[sbox-dev_q8AjPLuIie.mp4 1056x338](./images/sbox-dev-q8ajpluiie.mp4)
+[Editing sequence blocks](./images/editing-sequence-blocks-demo.mp4)
 
 Double-clicking on a sequence block will start editing the referenced movie, with the sequence block's time range highlighted in the timeline. The top of the track list will show you how the current project is nested, and you can return to outer movies by clicking them there.
 

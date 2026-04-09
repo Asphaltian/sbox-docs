@@ -17,6 +17,6 @@ Areas can be used to block of certain areas of the NavNesh both in editor and at
 ## Examples
 
 
-[null 1920x1078](./images/obstacle-example.mp4)
+[NavMesh obstacle blocking demo](./images/obstacle-example.mp4)
 
-[null 1920x1078](./images/obstacle-example-2.mp4)
+[NavMesh obstacle runtime demo](./images/obstacle-example-2.mp4)

@@ -41,7 +41,7 @@ And grab `citizen_human_male_REF.fbx`.
 
 ## Moving Major Shapes
 
-[ 1280x720](./images/266e6ab8-5b99-4e08-b254-fd2ae010b0da.png)
+[Moving clothing major shapes](./images/266e6ab8-5b99-4e08-b254-fd2ae010b0da.png)
 
 Firstly, we want to bring the neck loosely up to the same position of the human neck. As well as moving the wrists into position. No need to rotate or resize anything yet.
 
@@ -79,7 +79,7 @@ Any details like buttons, separate meshes, keep removed while morphing the main 
 
 ## **Moving Details** 
 
-[ 1280x720](./images/2a931a94-07ea-420b-8bfd-33278687689a.png)
+[Adjusting clothing details](./images/2a931a94-07ea-420b-8bfd-33278687689a.png)
 
 
  ![](./images/moving-details.png " =813x348")
@@ -161,7 +161,7 @@ LODs are still needed for the human versions of clothing. You can do this relati
 
 Here is an example of 'Transferring Attributes' in Maya. Other software have different ways of doing this. 
 
-[ 1280x720](./images/27619ca0-be7a-42f2-bf16-3214e04a604a.png)
+[Human clothing LOD setup](./images/27619ca0-be7a-42f2-bf16-3214e04a604a.png)
 
 
 :::info

@@ -12,7 +12,7 @@ updated: 2025-01-14
 
 In S&box, we want a library of clothing that all fit together, resulting in hundreds, thousands of outfit combinations.
 
-[ 1280x720](./images/c7890c21-10a8-4d67-b981-84573967d5a4.png)
+[Layering clothing system](./images/c7890c21-10a8-4d67-b981-84573967d5a4.png)
 
 If you're making a clothing piece, you'll need to consider what fits under or over it.  
 

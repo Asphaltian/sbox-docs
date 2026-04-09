@@ -16,7 +16,7 @@ This lets you act out the roles of characters by controlling them directly in-ga
 First create tracks for any properties you want to record. Common tracks will be added for you when dragging certain objects into the track list, like Player Controllers.
 
 
-[sbox-dev_XF4nmgXHcp.mp4 1524x948](./images/sbox-dev-xf4nmgxhcp.mp4)
+[Recording in play mode](./images/recording-in-play-mode.mp4)
 
 After that, enter play mode and press the Toggle Record button. Any changes to properties bound to tracks will get recorded directly to your movie. When you're done, hit the Toggle Record button again.
 
@@ -28,7 +28,7 @@ Your recording will still be in your movie when you exit play mode, letting you 
 You can record even when the game isn't in play mode, letting you puppet properties as a starting point for polishing later. As before, make sure you've created tracks for any properties you want to record, then use the Toggle Record button to start and stop recording.
 
 
-[sbox-dev_0ojEm1B0CT.mp4 1642x950](./images/sbox-dev-0ojem1b0ct.mp4)
+[Recording in editor mode](./images/recording-in-editor-mode.mp4)
 
 
 # Editing
@@ -44,4 +44,4 @@ Your best bet here is to save your recording to a separate .movie, then referenc
 Recordings can be shaky, especially when hand puppeting or manually operating a camera. Use the Smoothen option in the Motion Editor context menu to round out any rough edges in a selected time range. You can control how big the smoothing window is, with larger values leading to smoother tracks.
 
 
-[sbox-dev_BM40biM0lL.mp4 1052x1062](./images/sbox-dev-bm40bim0ll.mp4)
+[Smoothing recording tracks](./images/smoothing-recording-tracks.mp4)

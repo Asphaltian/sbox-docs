@@ -20,7 +20,7 @@ In this article you'll find out:
 
 If Movie Maker isn't already visible, you can toggle it in the View menu.
 
-[sbox-dev_xERW1ujnPd.mp4 2098x1076](./images/sbox-dev-xerw1ujnpd.mp4)
+[Opening the Movie Editor](./images/opening-the-movie-editor.mp4)
 
 It should fit nicely as a tab in the lower panel if you dock it there.
 
@@ -74,7 +74,7 @@ This track references blocks of time from another movie, helping you organize an
 
 Reference and property tracks can be created by dragging from the hierarchy or inspector into the track list.
 
-[sbox-dev_1Mc8djxfBo.mp4 1492x948](./images/sbox-dev-1mc8djxfbo.mp4)
+[Creating tracks by dragging](./images/creating-tracks-by-dragging.mp4)
 
 You can also create sub-tracks by right-clicking an existing track, and selecting the tracks you want from the context menu.
 

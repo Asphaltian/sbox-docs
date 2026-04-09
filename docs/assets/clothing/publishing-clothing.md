@@ -11,7 +11,7 @@ updated: 2025-01-14
 
 First, you'll need a fully set up .Clothing file. This is where we store our VMDLs and certain logic so your clothing works correctly. 
 
-[ 1280x720](./images/7f29653f-8fa4-4e7d-aed2-041a4a1df1e5.png)
+[Clothing file setup](./images/7f29653f-8fa4-4e7d-aed2-041a4a1df1e5.png)
 
 ### Breakdown 
 
@@ -99,7 +99,7 @@ Reminder to read over [Layering Clothing](/assets/clothing/layering-clothing.md)
 
 Now let's publish our .Clothing file to sbox.game, where our clothing can be seen online.
 
-[ 1280x720](./images/a96c7f35-b00e-4d36-8dbd-a91f24bbc4da.png)
+[Publishing clothing online](./images/a96c7f35-b00e-4d36-8dbd-a91f24bbc4da.png)
 
 
 ### Breakdown 
