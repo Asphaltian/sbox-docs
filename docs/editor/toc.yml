@@ -15,8 +15,6 @@ items:
   href: editor-tools/
 - name: Editor Widgets
   href: editor-widgets.md
-- name: Game Exporting
-  href: game-exporting.md
 - name: Mapping
   href: mapping/
 - name: Model Editor

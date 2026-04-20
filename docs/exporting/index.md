@@ -1,11 +1,11 @@
 ---
-title: "Game Exporting"
+title: "Exporting Standalone"
 icon: "🧍"
 created: 2025-10-10
 updated: 2026-04-08
 ---
 
-# Game Exporting
+# Exporting Standalone
 
 :::warning
 You can export your game, but you shouldn't distribute your exported game just yet.

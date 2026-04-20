@@ -25,10 +25,6 @@ Hammer-based map creation with brushwork, props, lights, and GameObjects.
 
 ModelDoc-based model editing and configuration.
 
-## [Game Exporting](/editor/game-exporting.md)
-
-Export your game as a standalone release.
-
 ## More
 
 - [Editor Shortcuts](/editor/editor-shortcuts.md) — Keyboard shortcuts
