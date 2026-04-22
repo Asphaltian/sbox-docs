@@ -23,8 +23,8 @@ items:
   href: actiongraph/
 - name: Movie Maker
   href: movie-maker/
-- name: Audio
-  href: audio/
+- name: Media
+  href: media/
 - name: Gameplay
   href: gameplay/
 - name: Services
