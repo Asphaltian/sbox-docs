@@ -2,44 +2,32 @@
 title: "Exporting Standalone"
 icon: "🧍"
 created: 2025-10-10
-updated: 2026-04-08
+updated: 2026-04-26
 ---
 
 # Exporting Standalone
 
 :::warning
-You can export your game, but you shouldn't distribute your exported game just yet.
+Exporting standalone games is currently in preview. Distribution requires approval from Valve - we're working with them to open this up to everyone. In the meantime, please don't distribute exported builds without a license from us (contact garry@facepunch.com).
 
 :::
 
-You can choose to export your games as executables, so that you can put them on other storefronts directly - e.g. Steam.
+Export your game as a standalone executable and distribute it outside of the s&box platform.
 
-These games don't have the typical restrictions that platform games have - there's no whitelist for code, and you can use standalone-exclusive APIs.
+* **Steam and beyond** - publish to any storefront, as long as it's also on Steam
+* **No engine royalties** - the engine is completely royalty-free, no revenue share
+* **Open source engine** - full access to the engine source code
+* **PC Only** - we don't have any console or mobile exports right now, this could always change in the future
+* **Full .NET access** - no code whitelist, use any .NET API
 
-Games are compiled with an extra `STANDALONE` constant when exporting.
-```csharp
-#if STANDALONE
-//code that should only run in an exported game
-#endif
-```
+Standalone games have no code whitelist restrictions and some additional APIs. See [Standalone Code](/exporting/standalone-code.md) for details.
 
-## How to Export your Game
-
-Exporting your game is done through the Export Wizard.
+## Export Wizard
 
 ![](./images/how-to-export-your-game.png)
 
-To access the wizard:
-
-
-1. Click on the "Project" menu
-2. Click "Export…"
-3. Add an icon and a splash screen if you want, if you're exporting to Steam then insert your App ID
-4. Click 'Next', wait for the project to export
-5. Your project's executable will be in the folder you selected in Step 3. You can click "Open Folder" to open the folder containing your game, and double click the exe to play it.
-
-## Restrictions
-
-The following restrictions apply to all games that are exported from s&box:
-
-* Your game must be put on Steam (it can be on other storefronts too, but Steam is a hard requirement)
+1. Click the **Project** menu
+2. Click **Export…**
+3. Set your icon, splash screen, and Steam App ID
+4. Click **Next** and wait for the export to complete
+5. Your executable will be in the output folder — click **Open Folder** to find it

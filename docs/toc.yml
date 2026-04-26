@@ -7,6 +7,8 @@ items:
   href: code/
 - name: Editor
   href: editor/
+- name: Exporting Standalone
+  href: exporting/
 - name: Assets
   href: assets/
 - name: Rendering
