@@ -122,11 +122,32 @@ Another special attribute in **Texture2D** creation is `OutputFormat`. It will t
 
 There is also technically nothing stopping you from using other image formats, such as `I8`, `RGBA8888`, `R16`, `RG1616`, `RGBA16161616`, `R32F` etc. but it is generally recommened to use compressed texture formats above for materials.
 
+## **Image Processors**
+
+:::warning
+💩 **Obscure features - everything in this section provided as-is.** You're free to use this information if you agree to following conditions: 1) it may break in the future, anytime, for any reason, 2) you're okay with that. 
+:::
+
+First string argument in `CreateInputTexture` is for image processor algorithm, which applies various modifications to the texture before processing it any further. In most cases you don't need to use an image processor, but here's a full list of them anyway:
+
+| Image Processor Name | Description |
+|----------------------|-------------|
+| `None` or `""` | Do not apply any image processor to given texture |
+| `Mod2XCenter` | Sums all pixel values and offsets every pixel so texture's average value is centered at **0.5**, which could be used for mod2x blending in shaders |
+| `NormalizeNormals` | Renormalizes RGB channels as a 3-component vector so normals maps have unit-length normals. |
+| `FillToPowerOfTwo` | Stretches a texture that isn't a power-of-two to the next *power-of-two* resolution by stretching edges of the texture, kind of like how clamp sampler works. Doesn't work with 3D textures |
+| `FillToMultipleOfFour` | Applies same edge stretching as `FillToPowerOfTwo`, but pads the texture to next *multiple of 4* resolution |
+| `ScaleToPowerOfTwo` | Resizes a texture that isn't power-of-two to appropriate dimensions. Doesn't work with 3D textures | 
+| `HeightToNormal` | Converts heightmap texture to tangent-space RGB normal map using 3x3 sobel filter | 
+| `Inverse` | Inverts every color channel in the texture |
+| `ConvertToYCoCg` | Converts texture color space from **RGB** to **YCoCg**. |
+| `DilateColorInTransparentPixels` | Applies [dilation](https://experienceleague.adobe.com/en/docs/substance-3d-painter/using/technical-support/workflow-issues/export-issues/texture-dilation-or-padding) to fully transparent pixels in provided texture. |
+| `EncodeRGBM` | Encodes linear HDR color into RGBM8 format | 
+
 ## **Mip Generators**
 
 :::warning
-💩 **Obscure/old features - everything in this section provided as-is.** You're free to use this information if you agree to following conditions: 1) it may break in the future, anytime, for any reason, 2) you're ok with that fact. 
-
+💩 **Obscure features - everything in this section provided as-is.** You're free to use this information if you agree to following conditions: 1) it may break in the future, anytime, for any reason, 2) you're okay with that. 
 :::
 
 Second argument in `Channel()` macro is the mip generation method. Most common one is `Box`, which simply creates mips with box filtering. This is what you should use most of the time anyway. Here is a list of other commonly used methods: 
@@ -155,7 +176,10 @@ And there is also a number of other mip generators which are listed here just fo
 | `AutoLevels( TexA )` | Generates mips using box filtering and then applies autolevel color adjustments, think of it like Photoshop effect where it automatically tries to balance out the color range | 
 | `BoxInverse( TexA )` | Generate mips with simple box filtering, but the result texture is inverted | 
 | `BoxN( TexA )` | Where N = number of max mips. So if you do `Box2( Texture )`, you will have only two mip levels. Uses box filtering. |
+| `RGBM` | Applies box filtering to mips and encodes them to RGBM format | 
 | `WrapGaussian( TexA )` | Mips with gaussian blur |
+| `GGXCubeMapBlur` | This method is only for cubemaps. Applies GGX-weighted cubemap blur | 
+| `GGXCubeMapBlurRGBM` | This method is only for cubemaps. Applies same effect as `GGXCubeMapBlur` but also encodes mips in RGBM format | 
 | `HeightCombine( HeightA, HeightB )` | Generates mips and combines two heightmaps together |
 
 ### Some Mips Previews
@@ -172,8 +196,7 @@ And there is also a number of other mip generators which are listed here just fo
 ## **Shader Attributes**
 
 :::warning
-💩 **Obscure/old features - everything in this section provided as-is.** You're free to use this information if you agree to following conditions: 1) it may break in the future, anytime, for any reason, 2) you're ok with that fact. 
-
+💩 **Obscure features - everything in this section provided as-is.** You're free to use this information if you agree to following conditions: 1) it may break in the future, anytime, for any reason, 2) you're okay with that. 
 :::
 
 In some shaders you may find such things as `BoolAttribute` and `TextureAttribute`. This is special attribute data which is read by engine for various rendering/utility purposes. In most cases you do not need to worry about them, but they are still listed here for the reference in case you ever wonder what are they doing in shader source code.
