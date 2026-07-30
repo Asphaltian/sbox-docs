@@ -2,7 +2,7 @@
 title: "Code Generation"
 icon: "🧞"
 created: 2023-11-19
-updated: 2025-06-15
+updated: 2026-07-17
 ---
 
 # Code Generation
@@ -250,7 +250,7 @@ public static class MyStaticClass
     m.Resume();
   }
 
-  internal static T OnWrapAnything( WrappedMethod<T> p, params object[] args )
+  internal static T OnWrapAnything( WrappedMethod<T> m, params object[] args )
   {
     m.Resume();
   }
