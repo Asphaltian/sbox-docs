@@ -2,7 +2,7 @@
 title: "Bindless API"
 icon: "🔗"
 created: 2024-12-03
-updated: 2025-06-25
+updated: 2026-07-30
 ---
 
 # Bindless API
@@ -12,7 +12,6 @@ updated: 2025-06-25
 The fancy new way to do things in Vulkan / DX12 is bindless. This removes the limitations of the binding model allowing you to have access to far more textures and other resources within a shader and the ability to sample them from a dynamically provided identifier from buffers, vertex input, etc.
 
 This allows a lot more versatility in your shaders, less CPU time spent binding textures and is the fundamental key to GPU driven rendering.
-
 
 ![](./images/what-is-bindless.png)
 
@@ -28,12 +27,11 @@ Texture3D Bindless::GetTexture3D( int nIndex );
 TextureCube Bindless::GetTextureCube( int nIndex );
 Texture2DArray Bindless::GetTexture2DArray( int nIndex );
 TextureCubeArray Bindless::GetTextureCubeArray( int nIndex );
+SamplerState Bindless::GetSampler( int nIndex );
 ```
 
-
 :::tip
-SRGB variants of Texture2D can be sampled with Bindless::GetTexture2D( nIndex, true );
-
+sRGB variants of Texture2D can be sampled with Bindless::GetTexture2D( nIndex, true );
 :::
 
 Additionally these methods are avaliable in compute shaders only:
@@ -44,7 +42,7 @@ RWTexture3D<float4> Bindless::GetRWTexture3D( int nIndex );
 RWTexture2DArray<float4> Bindless::GetRWTexture2DArray( int nIndex );
 ```
 
-### Example
+### Example: Bindless Textures
 
 Here's how you would create a structured buffer in C# containing texture indices and consume them in a shader.
 
@@ -67,7 +65,6 @@ TerrainsMaterialBuffer.SetData( new[] {
 SceneModel.Attributes.Set( "TerrainMaterials", TerrainMaterialsBuffer );
 ```
 
-
 ```cpp
 struct TerrainMaterial
 {
@@ -88,6 +85,33 @@ void SampleTerrain( float2 uv, in out float3 color, in out float3 normal )
     color += ColorTexture.Sample( Sampler, uv );
     normal += NormalTexture.Sample( Sampler, uv );
   }
+}
+```
+
+### Example: Bindless Sampler State
+
+You can also create a sampler state from C# and then expose it to shaders via bindless.
+
+```csharp
+// Create a new component sampler property with bilinear filtering set as default
+[Property] public SamplerState MyBindlessSampler { get; set; } = new() { Filter = FilterMode.Bilinear };
+
+protected override void OnEnabled()
+{
+  Scene.RenderAttributes.Set( "MyBindlessSamplerIndex", MyBindlessSampler.Index );
+}
+```
+
+And this is how you read this bindless index value from your shader:
+
+```cpp
+// Add an attribute which reads "MyBindlessSamplerIndex" value from C#
+int g_nMyBindlessSamplerId < Attribute( "MyBindlessSamplerIndex" ); Default( -1 ); >; 
+
+float4 MainPs( PixelInput i ) : SV_Target0
+{
+  SamplerState sBindlessSampler = Bindless::GetSampler( MyBindlessSamplerIndex );
+  float3 MyTexture = g_tColor.Sample( sBindlessSampler, i.vTextureCoords.xy ).rgb;
 }
 ```
 
