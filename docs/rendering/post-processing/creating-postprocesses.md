@@ -2,7 +2,7 @@
 title: "Creating PostProcesses"
 icon: "🔧"
 created: 2024-05-08
-updated: 2025-10-02
+updated: 2026-08-02
 ---
 
 # Creating PostProcesses
@@ -12,7 +12,7 @@ updated: 2025-10-02
 To make a post process shader you should derive from `BasePostProcess<T>`. This makes it easier to make a component that will be able to blend from multiple others.
 
 ```csharp
-public sealed class MyBrightnessEffect: BasePostProcess<MyBrightnessEffect>
+public sealed class MyBrightnessEffect : BasePostProcess<MyBrightnessEffect>
 {
 	[Property, Range( -1, 1 )]
 	public float Brightness{ get; set; } = 0.0f;
@@ -42,13 +42,18 @@ This method gets a weighted value from all of the volumes we might be in. So ins
 
 This method will create a CommandList, which will later be executed when rendering. You can specify the render stage and the order.
 
-You can also specify whether your effect needs the backbuffer or not. If you do, it'll be passed to your shader using the name`ColorBuffer`.
+You can also specify whether your effect needs the backbuffer or not. If you do, it'll be passed to your shader using the name `ColorBuffer`.
 
 ## Shader
 
 Here's a very basic shader that will let the component change the brightness.
 
 ```cpp
+MODES 
+{
+    Forward();
+}
+
 COMMON
 {
     #include "postprocess/shared.hlsl"
@@ -56,14 +61,23 @@ COMMON
 
 struct VertexInput
 {
-    float3 pos : POSITION < Semantic( PosXyz ); >;
-    float2 uv : TEXCOORD0 < Semantic( LowPrecisionUv ); >;
+    float3 vPositionOs  : POSITION < Semantic( PosXyz ); >;
+    float2 vTexCoord    : TEXCOORD0 < Semantic( LowPrecisionUv ); >;
 };
 
 struct PixelInput
 {
-    float2 uv : TEXCOORD0;
-	float4 pos : SV_Position;
+    float2 vTexCoord : TEXCOORD0;
+
+	// VS only
+	#if ( PROGRAM == VFX_PROGRAM_VS )
+		float4 vPositionPs		: SV_Position;
+	#endif
+
+	// PS only
+	#if ( ( PROGRAM == VFX_PROGRAM_PS ) )
+		float4 vPositionSs		: SV_Position;
+	#endif
 };
 
 VS
@@ -72,8 +86,9 @@ VS
     {
         PixelInput o;
         
-        o.pos = float4(i.pos.xy, 0.0f, 1.0f);
-        o.uv = i.uv;
+        o.vPositionPs = float4( i.vPositionOs.xy, 0.0f, 1.0f );
+        o.vTexCoord = i.vTexCoord;
+        
         return o;
     }
 }
@@ -85,14 +100,14 @@ PS
     #include "procedural.hlsl"
 
     Texture2D colorBuffer < Attribute( "ColorBuffer" ); SrgbRead( true ); >;
-    float brightness< Attribute("brightness"); >;
+
+    float g_flBrightness < Attribute ( "brightness" ); >;
 
     float4 MainPs( PixelInput i ) : SV_Target0
     {
-        float2 uv = CalculateViewportUv( i.uv.xy );
-        float4 color = colorBuffer.SampleLevel( g_sBilinearMirror, uv, 0 );
+        float4 color = colorBuffer.SampleLevel( g_sBilinearMirror, i.vTexCoord.xy, 0 );
 
-        color.rgb *= brightness;
+        color.rgb *= g_flBrightness;
 
         return color;
     }
