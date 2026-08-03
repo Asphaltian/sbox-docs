@@ -15,9 +15,9 @@ The API lives in the `Sandbox.Platform` namespace.
 
 Chat can be configured in **Project Settings > Platform**:
 
-- **Chat Enabled** — toggle the entire chat system on or off
-- **Show Chat UI** — hide the built-in overlay while still processing messages and firing events (useful for custom chat UIs)
-- **Max Message Length** — cap message length (up to 256 characters)
+- **Chat Enabled** - toggle the entire chat system on or off
+- **Show Chat UI** - hide the built-in overlay while still processing messages and firing events (useful for custom chat UIs)
+- **Max Message Length** - cap message length (up to 256 characters)
 
 ## Sending Messages
 
@@ -45,8 +45,8 @@ Messages are automatically sanitized, rate-limited, and passed through Steam's t
 
 Implement `IChatEvent` on a component to intercept, modify, suppress, or filter messages. This event fires in two places:
 
-- **On the host** — before broadcasting. You can modify the message, suppress it, or set a `RecipientFilter`.
-- **On receiving clients** — after delivery. You can still suppress the message to prevent it from showing in the UI.
+- **On the host** - before broadcasting. You can modify the message, suppress it, or set a `RecipientFilter`.
+- **On receiving clients** - after delivery. You can still suppress the message to prevent it from showing in the UI.
 
 ```csharp
 public class TeamChat : Component, IChatEvent

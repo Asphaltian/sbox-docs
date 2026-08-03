@@ -33,6 +33,6 @@ public interface IGameObjectNetworkEvents : ISceneEvent<IGameObjectNetworkEvents
 
 
 :::success
-This event is only targetted at a single GameObject - the one that is changing.
+This event is only targeted at a single GameObject - the one that is changing.
 
 :::

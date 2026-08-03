@@ -43,6 +43,7 @@ ExtraShaderData allows you to still have instances even though some data is diff
 struct ExtraShaderData_t
 {
 	float4 vTint;
+	uint nVertexCacheOffset;
 	uint nBlendWeightCount;	// if D_SKINNING, blend weight count
 };
 ```

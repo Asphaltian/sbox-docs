@@ -118,7 +118,7 @@ If you wish to store a reference to MyChildPanel so you can modify its propertie
 {
   MyChildPanel PanelReference { get; set; }
   
-  protected override void OnStart()
+  protected override void OnTreeFirstBuilt()
   {
     PanelReference.Health = Player.Local.Health;
     PanelReference.Armor = Player.Local.Armor;

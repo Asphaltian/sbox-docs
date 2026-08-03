@@ -42,7 +42,7 @@ You can access a GameObjectSystem in a number of ways. One way is using `Scene.G
 
 You can also inherit from `GameObjectSystem<T>` which adds a `static T Current` property to your system.
 
-```cpp
+```csharp
 public class MyGameSystem : GameObjectSystem<MyGameSystem>
 {
   	public MyGameSystem( Scene scene ) : base( scene )
@@ -58,7 +58,7 @@ public class MyGameSystem : GameObjectSystem<MyGameSystem>
 
 Then you can use them like…
 
-```cpp
+```csharp
 MyGameSystem.Current.MyMethod();
 ```
 
@@ -72,7 +72,7 @@ The order defines where to call your method during that event. -1 would call it 
 
 GameObjectSystems have two methods of configuration. You can either globally configure them, or edit them per scene.
 
-In Project Settings, hit Systems — and you can configure them there.
+In Project Settings, hit Systems, and you can configure them there.
 
 
 :::info

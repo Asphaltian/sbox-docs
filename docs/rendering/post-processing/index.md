@@ -2,12 +2,24 @@
 title: "Post Processing"
 icon: "🖼️"
 created: 2024-05-08
-updated: 2025-10-02
+updated: 2026-08-03
 ---
 
 # Post Processing
 
 Post-processing effects can be applied by adding components to the Camera or to a [PostProcessVolume](/rendering/post-processing/postprocessvolume.md).
+
+## [Effects](/rendering/post-processing/effects/index.md)
+
+The built in effects: tonemapping and film grain.
+
+## [PostProcessVolume](/rendering/post-processing/postprocessvolume.md)
+
+Apply a set of effects only while the camera is inside a volume, with blending.
+
+## [Creating PostProcesses](/rendering/post-processing/creating-postprocesses.md)
+
+Write your own effect as a component plus a shader.
 
 # Camera Settings
 

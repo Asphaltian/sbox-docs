@@ -137,7 +137,7 @@ public class MyComponent : Component
 
     private void OnPlayersChanged( NetListChangeEvent<string> e )
     {
-        Log.Info( $"List changed: {e.Type} — New: {e.NewValue}, Old: {e.OldValue}, Index: {e.Index}" );
+        Log.Info( $"List changed: {e.Type} - New: {e.NewValue}, Old: {e.OldValue}, Index: {e.Index}" );
     }
 }
 ```
@@ -166,7 +166,7 @@ public class MyComponent : Component
 
     private void OnScoresChanged( NetDictionaryChangeEvent<string, int> e )
     {
-        Log.Info( $"Scores changed: {e.Type} — Key: {e.Key}, New: {e.NewValue}, Old: {e.OldValue}" );
+        Log.Info( $"Scores changed: {e.Type} - Key: {e.Key}, New: {e.NewValue}, Old: {e.OldValue}" );
     }
 }
 ```

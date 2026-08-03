@@ -7,7 +7,7 @@ updated: 2026-04-10
 
 # Gameplay
 
-Core gameplay systems — input, navigation, terrain, and more.
+Core gameplay systems: input, navigation, terrain, and more.
 
 ## [Input](/gameplay/input/index.md)
 

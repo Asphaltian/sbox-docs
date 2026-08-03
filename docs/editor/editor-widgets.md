@@ -38,15 +38,13 @@ public class ExampleWidget : Widget
 	}
 }
 ```
-```csharp
-```
 
 You can now create this Widget anywhere else in your Editor Project by doing the following:
 
 ```csharp
 // Creates the Widget as a new Window since it has no parent
 var windowExample = new ExampleWidget(null);
-windowExample.Show()
+windowExample.Show();
 
 // Creates the Widget as the child of another Widget, then adds it to that Widget's Layout
 var childExample = new ExampleWidget(parentWidget);

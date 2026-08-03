@@ -36,7 +36,7 @@ go.Network.SetOwnerTransfer( OwnerTransfer.Takeover );
 You can find the owner of a GameObject by checking `Network.OwnerId`.
 
 ```csharp
-public override void Update()
+protected override void OnUpdate()
 {
 	Log.Info( $"Owner is {Network.OwnerId}" );
 }
@@ -45,7 +45,7 @@ public override void Update()
 In reality, day to day, you won't really be interested in the particular owner. You only care about whether you're meant to be simulating it or not. You do that by checking `IsProxy` - which is true if the GameObject is being simulated by another client (or the server).
 
 ```csharp
-public override void Update()
+protected override void OnUpdate()
 {
     // this is controlled by someone else
     if ( IsProxy ) return;
@@ -66,16 +66,16 @@ You can take ownership of an object, which makes you the simulator.
 void TryPickup()
 {
 	// are we looking at anything?
-	var tr = Physics.Trace.WithoutTags( "player" )
+	var tr = Scene.Trace
 			.Sphere( 16, EyePos, EyePos + LookDir.Forward * 100 )
+			.WithoutTags( "player" )
 			.Run();
 
 	if ( !tr.Hit ) return;
 
-	if ( tr.Body.GameObject is not GameObject go )
-		return;
+	var go = tr.GameObject;
 
-	if ( !go.Tags.Has( "pickup" ) )
+	if ( !go.IsValid() || !go.Tags.Has( "pickup" ) )
 		return;
 
     // You're my wife now

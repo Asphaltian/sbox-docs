@@ -22,7 +22,7 @@ It's totally valid to not have a menu or intro scene though, and just jump strai
 
 If your game is capable of loading maps from the main menu then that map is loaded instead of your startup scene. This presents a problem for your game - because none of your game stuff is in that map. You probably want to spawn UI and game manager stuff in the map, in order to let people play.
 
-The way to do this is to create a [GameObjectSystem] that will spawn in all that stuff. Here's an example where we spawn it in from another scene.
+The way to do this is to create a [GameObjectSystem](/scene/gameobjectsystem.md) that will spawn in all that stuff. Here's an example where we spawn it in from another scene.
 
 ```csharp
 public sealed class MyGameManager : GameObjectSystem<MyGameManager>, ISceneStartup

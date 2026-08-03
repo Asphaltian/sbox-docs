@@ -7,7 +7,7 @@ updated: 2024-12-17
 
 # GameResource Extensions
 
-ResourceExtensions can be used to append additional data to existing GameResources without modifying the original class or assets. This is useful for adding additional properties to resources such as Clothing, Surfaces, Models, ect.
+ResourceExtensions can be used to append additional data to existing GameResources without modifying the original class or assets. This is useful for adding additional properties to resources such as Clothing, Surfaces, Models, etc.
 
 # Creating a ResourceExtension
 
@@ -62,7 +62,7 @@ var clothingExtension = ClothingExtension.FindForResource( PlayerHat );
 
 if ( clothingExtension is not null )
 {
-  Log.Info( $"The cost of the hat is {clothingExtension.CostToUnlock});
+  Log.Info( $"The cost of the hat is {clothingExtension.CostToUnlock}" );
 }
 else
 {
@@ -75,11 +75,11 @@ else
 ```csharp
 // This will return all ResourceExtension of your type that target the specified resource
 // This will NOT return the default unless the default happens to also target the resource
-var allExtensions = ClothingExtension.FindAllForResource( PlayerHat )
+var allExtensions = ClothingExtension.FindAllForResource( PlayerHat );
 
-foreach ( var extension in allExtension )
+foreach ( var extension in allExtensions )
 {
-  Log.Info( $"The cost of the hat is {clothingExtension.CostToUnlock});
+  Log.Info( $"The cost of the hat is {extension.CostToUnlock}" );
 }
 ```
 
@@ -87,7 +87,7 @@ foreach ( var extension in allExtension )
 
 ```csharp
 // This will return the ResourceExtension marked as "Default" if one exists
-var defaultExtension = ClothingExtension.FindDefault()
+var defaultExtension = ClothingExtension.FindDefault();
 
 Log.Info( $"The default cost is {defaultExtension.CostToUnlock}" );
 ```

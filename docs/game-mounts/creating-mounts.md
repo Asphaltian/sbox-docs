@@ -13,8 +13,8 @@ The mount system is extensible - anyone can write a mount to add support for a n
 
 The mounting system is built on two key classes:
 
-- **`BaseGameMount`** — detects the game and registers assets during mount
-- **`ResourceLoader`** — loads and converts individual assets on demand
+- **`BaseGameMount`** - detects the game and registers assets during mount
+- **`ResourceLoader`** - loads and converts individual assets on demand
 
 Mounts live in the s&box engine under the `engine/Mounting/` folder. To add support for a new game or engine, create a new mount project, code it and submit a pull request.
 

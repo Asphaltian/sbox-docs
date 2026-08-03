@@ -27,8 +27,11 @@ public sealed class MyComponent : Component
 	[JsonUpgrader( typeof( MyComponent ), 1 )]
 	private static void StringPropertyUpgrader( JsonObject json )
 	{
-		json.Remove( "StringProperty", out var newNode );
-		json["NewStringProperty"] = newNode;
+		if ( !json.TryGetPropertyValue( "StringProperty", out var oldNode ) )
+			return;
+
+		json.Remove( "StringProperty" );
+		json["NewStringProperty"] = (string)oldNode;
 	}
  
  	/// <summary>
@@ -38,13 +41,16 @@ public sealed class MyComponent : Component
 	[JsonUpgrader( typeof( MyComponent ), 2 )]
 	private static void StringPropertyIntoArray( JsonObject json )
 	{
+		if ( !json.TryGetPropertyValue( "NewStringProperty", out var oldNode ) )
+			return;
+
 		// Deletes NewStringProperty
-		json.Remove( "NewStringProperty", out var newNode );
+		json.Remove( "NewStringProperty" );
 
 		// Creates a JsonArray object which we're going to put our old property inside of.
 		var jsonArray = new JsonArray
 		{
-			newNode
+			(string)oldNode
 		};
 
 		json["StringPropertyArray"] = jsonArray;

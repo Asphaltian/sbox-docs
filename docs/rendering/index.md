@@ -23,4 +23,4 @@ Visual node-based shader editor for creating custom materials.
 
 ## [Shaders](/rendering/shaders/index.md)
 
-Writing shaders in code — HLSL shading models, render states, and GPU instancing.
+Writing shaders in code: HLSL shading models, render states, and GPU instancing.

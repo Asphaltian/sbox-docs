@@ -37,7 +37,7 @@ public class MyPanel : Panel
 
 # Using a Panel
 
-Once you've create a Panel, it can be used in two different ways. The first is done identically to how we added a `Label` in the example above:
+Once you've created a Panel, it can be used in two different ways. The first is done identically to how we added a `Label` in the example above:
 
 ```csharp
 var myPanel = new MyPanel();

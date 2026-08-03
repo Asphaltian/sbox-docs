@@ -13,7 +13,7 @@ updated: 2025-09-01
 
 **All source files come with the game: VMDLs, FBXs, animgraphs, etc.**
 
-You can find them right in the game folder, under `addons/citizen/models/citizen`. These files are synced straight from our source folders; when new source files are added on our end, they'll show up in that folder for you too!
+You can find them right in the game folder, under `addons/citizen/Assets/models/citizen`. These files are synced straight from our source folders; when new source files are added on our end, they'll show up in that folder for you too!
 
 
 :::info

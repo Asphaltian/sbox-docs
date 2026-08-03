@@ -7,7 +7,7 @@ updated: 2026-03-04
 
 # Unit Tests
 
-If you add a  `UnitTests`  directory to your project folder, we will automatically generate a Unit Test project for you.
+If you add a `UnitTests` directory to your project folder, we will automatically generate a Unit Test project for you.
 In order for the project to be generated you need to restart your editor if you have it open.
 
 ## Your First Test
@@ -28,11 +28,11 @@ public class MyFirstTest
 }
 ```
 
-You can run the tests using the `dotnet test` command via [CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-test). If your using Visual Studio you can use the Test Explorer to run your tests.
+You can run the tests using the `dotnet test` command via [CLI](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-test). If you're using Visual Studio you can use the Test Explorer to run your tests.
 
 ## Game Tests
 
-If your test relies on engine functionality, for example if you want to test a component. You can initialize the engine using the following code:
+If your test relies on engine functionality, for example if you want to test a component, you can initialize the engine using the following code:
 
 ```csharp
 global using Microsoft.VisualStudio.TestTools.UnitTesting;

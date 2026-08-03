@@ -2,7 +2,7 @@
 title: "Attributes and Variables"
 icon: "📥"
 created: 2024-12-07
-updated: 2025-08-11
+updated: 2026-08-03
 ---
 
 # Attributes and Variables
@@ -28,7 +28,7 @@ The Material Editor provides a graphical interface to adjust and control attribu
 Certain attributes can have custom UI behaviors. For instance, `UiType(Color)` turns a float3 into a color picker. Other UI hints can be used to provide default values and ranges.
 
 ```csharp
-float3 TintColor < UiType(Color); Default3(1.0, 1.0, 1.0) >;
+float3 TintColor < UiType( Color ); Default3( 1.0, 1.0, 1.0 ); >;
 ```
 
 ### Reference
@@ -47,11 +47,11 @@ The following attributes are supported for constants:
 
 `Range2( arg, arg2 )` - Limits the UI of a float2/int2 to this range
 
-`Range3( arg, arg2, arg3 )` - Limits the UI of a float2/int2 to this range
+`Range3( arg, arg2, arg3 )` - Limits the UI of a float3/int3 to this range
 
-`Range4( arg, arg2, arg3, arg4 )` - Limits the UI of a float2/int2 to this range
+`Range4( arg, arg2, arg3, arg4 )` - Limits the UI of a float4/int4 to this range
 
-`UIType( type )` - Explicitly set which UI type to use for this variable
+`UiType( type )` - Explicitly set which UI type to use for this variable
 
 * `Slider`
 * `Color`
@@ -66,9 +66,9 @@ You can define an image to use on the material editor UI as follows:
 ```csharp
 CreateInputTexture2D(
     Name, 
-    ColorSpace,           // Color space: Linear or SRGB
+    ColorSpace,           // Color space: Linear or Srgb
     Precision,            // Precision per channel (e.g. 8 for 8-bit)
-    Format,               // Format (e.g., DXT5, BC7)
+    "ImageProcessor",     // Image processor to run on the source image, "" for none
     "Suffix",             // File suffix to filter in the UI
     "Group,1/10",         // UI group and ordering
     Default(0.5)          // Default value if none is provided
@@ -120,7 +120,7 @@ Another special attribute in **Texture2D** creation is `OutputFormat`. It will t
 | `BC6H` | Compressed texture format with *HDR color* in 16 bit depth, no alpha | 
 | `BC7`  | Compressed texture format with alpha, most commonly used one | 
 
-There is also technically nothing stopping you from using other image formats, such as `I8`, `RGBA8888`, `R16`, `RG1616`, `RGBA16161616`, `R32F` etc. but it is generally recommened to use compressed texture formats above for materials.
+There is also technically nothing stopping you from using other image formats, such as `I8`, `RGBA8888`, `R16`, `RG1616`, `RGBA16161616`, `R32F` etc. but it is generally recommended to use compressed texture formats above for materials.
 
 ## **Image Processors**
 
@@ -128,7 +128,7 @@ There is also technically nothing stopping you from using other image formats, s
 💩 **Obscure features - everything in this section provided as-is.** You're free to use this information if you agree to following conditions: 1) it may break in the future, anytime, for any reason, 2) you're okay with that. 
 :::
 
-First string argument in `CreateInputTexture` is for image processor algorithm, which applies various modifications to the texture before processing it any further. In most cases you don't need to use an image processor, but here's a full list of them anyway:
+The fourth argument to `CreateInputTexture2D` is the image processor algorithm, which applies various modifications to the texture before processing it any further. In most cases you don't need to use an image processor, but here's a full list of them anyway:
 
 | Image Processor Name | Description |
 |----------------------|-------------|
@@ -260,7 +260,7 @@ private struct Constants
 
 private Rendering.CommandList ConstantsCommandList()
 {
-    Rendering.CommandList commands = new("Example Commmand List");
+    Rendering.CommandList commands = new("Example Command List");
     
     var constants = new Constants();
     
@@ -312,7 +312,7 @@ protected override void OnEnabled()
    
 private Rendering.CommandList ExampleCommandList()
 {
-    Rendering.CommandList commands = new("Example Commmand List");
+    Rendering.CommandList commands = new("Example Command List");
     
     var compute = new ComputeShader( "example_cs" );
 

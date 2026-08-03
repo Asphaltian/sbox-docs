@@ -2,7 +2,7 @@
 title: "Render States"
 icon: "⚙️"
 created: 2025-08-11
-updated: 2025-08-11
+updated: 2026-08-03
 ---
 
 # Render States
@@ -17,12 +17,12 @@ RenderState( BlendEnable, true );
 |------|-------------|--------|
 | **FillMode** | Determines how polygons are rendered (solid faces or wireframe edges). | `WIREFRAME`, `SOLID` |
 | **CullMode** | Specifies which faces (front, back, or none) are culled from rendering. | `NONE`, `BACK`, `FRONT` |
-| **DepthBias** | Enables or disables depth bias to adjust depth values for rendering order. | `true`, `false` |
-| **DepthBiasClamp** | Enables or disables clamping of depth bias to a set range. | `true`, `false` |
-| **SlopeScaleDepthBias** | Enables or disables slope-scaled depth bias for polygons. | `true`, `false` |
+| **DepthBias** | Constant depth bias added to adjust depth values for rendering order. | Integer |
+| **DepthBiasClamp** | Maximum depth bias that can be applied. | Float |
+| **SlopeScaleDepthBias** | Slope-scaled depth bias for polygons. | Float |
 | **DepthClipEnable** | Enables or disables clipping of geometry against the near/far depth planes. | `true`, `false` |
 | **MultisampleEnable** | Enables or disables multisample anti-aliasing. | `true`, `false` |
-| **SampleMask** | Controls which samples in a multisample target are updated. | `true`, `false` |
+| **SampleMask** | Controls which samples in a multisample target are updated. | Integer bitmask |
 | **DepthEnable** | Enables or disables depth testing. | `true`, `false` |
 | **DepthWriteEnable** | Enables or disables writing to the depth buffer. | `true`, `false` |
 | **DepthFunc** | Comparison function for depth testing. | `NEVER`, `LESS`, `EQUAL`, `LESS_EQUAL`, `GREATER`, `NOT_EQUAL`, `GREATER_EQUAL`, `ALWAYS` |
@@ -55,8 +55,8 @@ RenderState( BlendEnable, true );
 | **SrgbWriteEnable1** | Enables sRGB write conversion for render target 1. | `true`, `false` |
 | **SrgbWriteEnable2** | Enables sRGB write conversion for render target 2. | `true`, `false` |
 | **SrgbWriteEnable3** | Enables sRGB write conversion for render target 3. | `true`, `false` |
-| **BlendFactor** | Enables use of a constant blend factor. | `true`, `false` |
+| **BlendFactor** | The constant blend factor, used by the `BLEND_FACTOR` blend modes. | Four floats |
 | **HighPrecisionBlendEnable** | Enables high-precision blending. | `true`, `false` |
 | **AlphaTestEnable** | Enables alpha testing. | `true`, `false` |
-| **AlphaTestRef** | Reference value for alpha testing. | `true`, `false` *(likely meant to be a numeric range instead)* |
+| **AlphaTestRef** | Reference value for alpha testing. | Float |
 | **AlphaTestFunc** | Comparison function for alpha testing. | `NEVER`, `LESS`, `EQUAL`, `LESS_EQUAL`, `GREATER`, `NOT_EQUAL`, `GREATER_EQUAL`, `ALWAYS` |

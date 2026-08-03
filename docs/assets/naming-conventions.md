@@ -5,7 +5,9 @@ created: 2026-04-08
 updated: 2026-05-06
 ---
 
-# Texture Naming
+# Naming Conventions
+
+## Texture Naming
 
 The editor can automatically assign the textures in a Material as long as they follow the naming conventions below.
 

@@ -2,7 +2,7 @@
 title: "Network Events"
 icon: "📆"
 created: 2023-11-25
-updated: 2024-03-13
+updated: 2026-08-03
 ---
 
 # Network Events
@@ -28,7 +28,7 @@ public sealed class GameNetworkManager : Component, Component.INetworkListener
 	public void OnActive( Connection connection )
 	{
 		// Spawn a player for this client
-		var player = PlayerPrefab.Clone( SpawnPoint.Transform.World );
+		var player = PlayerPrefab.Clone( SpawnPoint.WorldTransform );
 
 		// Find the NameTag component and set their name correctly
 		var nameTag = player.Components.Get<NameTagPanel>( FindMode.EverythingInSelfAndDescendants );
@@ -47,13 +47,49 @@ public sealed class GameNetworkManager : Component, Component.INetworkListener
 # INetworkListener
 
 
-The interface `INetworkListener` has multiple methods that you can optionally override.
+The interface `INetworkListener` has multiple methods that you can optionally override. These are all called on the host only.
 
 | Method | Description |
 |--------|-------------|
+| `AcceptConnection` | Called before a connection is let in, so you can turn it away. |
 | `OnConnected` | The client has connected to the server. They're about to start handshaking, in which they'll load the game and download all the required packages. |
 | `OnDisconnected` | The client has disconnected from the server. |
 | `OnActive` | The client is fully connected and completed the handshake. After this call they will close the loading screen and start playing. |
+| `OnBecameHost` | The previous host left and you are now the host. |
+
+## AcceptConnection
+
+Return `false` to deny the connection, and set `reason` to the message the client is shown. If any component implementing this returns `false`, the connection is denied.
+
+```csharp
+public bool AcceptConnection( Connection channel, ref string reason )
+{
+	if ( BannedSteamIds.Contains( channel.SteamId ) )
+	{
+		reason = "You're banned from this server.";
+		return false;
+	}
+
+	if ( Connection.All.Count >= MaxPlayers )
+	{
+		reason = "Server is full.";
+		return false;
+	}
+
+	return true;
+}
+```
+
+## OnBecameHost
+
+In a lobby, the host can leave. When that happens one of the remaining clients is promoted, and gets this callback with the connection of the host that left. This is where you'd pick up anything only the host was doing.
+
+```csharp
+public void OnBecameHost( Connection previousHost )
+{
+	Log.Info( $"{previousHost.DisplayName} left, we're the host now" );
+}
+```
 
 
 # INetworkSpawn

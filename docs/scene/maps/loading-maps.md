@@ -30,7 +30,7 @@ Select the GameObject with the `MapInstance` component and use the **Map** prope
 
 ## By Package Ident
 
-Set `MapName` to a package identifier from asset.party. The map package will be downloaded and mounted automatically.
+Set `MapName` to a package identifier from sbox.game. The map package will be downloaded and mounted automatically.
 
 ```csharp
 var mapInstance = GetComponent<MapInstance>();

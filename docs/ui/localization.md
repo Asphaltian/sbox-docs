@@ -11,7 +11,7 @@ When displaying text such as `Hello World`, you should instead use a localizatio
 
 # Tokens
 
-In UI, any displayed string that begins with a `#` will be recognized as a token, which means it will look for it's real value in the localization system.
+In UI, any displayed string that begins with a `#` will be recognized as a token, which means it will look for its real value in the localization system.
 
 # Example
 
@@ -45,7 +45,7 @@ First, in your localization file, add placeholders using braces like this:
 
 Then, use Language.GetPhrase to substitute that placeholder with your desired text:
 
-```cs
+```csharp
     var data = new Dictionary<string, object>();
     data["Name"] = connection.DisplayName;
     var message = Language.GetPhrase( "player.join", data );

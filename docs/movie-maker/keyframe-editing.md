@@ -50,7 +50,7 @@ You can combine different modes for neighbouring keyframes to make animations ea
 
 ## Automatic Track Creation
 
-For convenience, you can enable this mode to create tracks whenever you touch something in the scene. This helps the most when you're changing lots of properties on many objects, so you don't have to manually created dozens of tracks.
+For convenience, you can enable this mode to create tracks whenever you touch something in the scene. This helps the most when you're changing lots of properties on many objects, so you don't have to manually create dozens of tracks.
 
 
 ![Automatic track creation](./images/automatic-track-creation.mp4)

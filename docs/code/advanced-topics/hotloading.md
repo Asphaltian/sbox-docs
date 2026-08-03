@@ -43,7 +43,7 @@ We have a fast path for arrays and lists containing value types, as long as they
 ```csharp
 public record struct UserStruct( Vector3 Foo, int Bar );
 
-public int[] UserStructArray;        // Fast
+public int[] IntArray;               // Fast
 public string[] StringArray;         // Slow
 public object[] ObjectArray;         // Slow
 public Vector3[] VectorArray;        // Fast
@@ -84,18 +84,18 @@ Since we copy the runtime value of fields into the newly loaded assembly (where 
 
 ```csharp
 // Code before Hotload
-public static Example1 = "Hello";
-public static Example2 { get; } = "Hello";
-public static Example3 => "Hello";
-public const Example4 = "Hello";
-[SkipHotload] public static Example5 = "Hello";
+public static string Example1 = "Hello";
+public static string Example2 { get; } = "Hello";
+public static string Example3 => "Hello";
+public const string Example4 = "Hello";
+[SkipHotload] public static string Example5 = "Hello";
 
-// Code after hotload                           // Actual runtime value
-public static Example1 = "World";               // "Hello" ❌
-public static Example2 { get; } = "World";      // "Hello" ❌
-public static Example3 => "World";              // "World" ✔️
-public const Example4 = "World";                // "World" ✔️
-[SkipHotload] public static Example5 = "World"; // "World" ✔️
+// Code after hotload                                  // Actual runtime value
+public static string Example1 = "World";               // "Hello" ❌
+public static string Example2 { get; } = "World";      // "Hello" ❌
+public static string Example3 => "World";              // "World" ✔️
+public const string Example4 = "World";                // "World" ✔️
+[SkipHotload] public static string Example5 = "World"; // "World" ✔️
 ```
 
 ### Dictionary / HashSet
@@ -114,7 +114,7 @@ Hotload will do its best to let Delegate instances survive hotloads, but it migh
 
 
 :::tip
-If you get warnings about delegates that fail to process even when changing unrelated code, please let is know!
+If you get warnings about delegates that fail to process even when changing unrelated code, please let us know!
 
 :::
 

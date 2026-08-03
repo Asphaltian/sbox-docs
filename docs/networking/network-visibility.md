@@ -7,7 +7,7 @@ updated: 2026-07-28
 
 # Network Visibility & Culling
 
-Network Visibility controls **whether a networked object should be visible for a specific player (Connection)**. Visibility determines whether the object receives ongoing network updates — such as Sync Vars and Transform updates — for that client.
+Network Visibility controls **whether a networked object should be visible for a specific player (Connection)**. Visibility determines whether the object receives ongoing network updates, such as Sync Vars and Transform updates, for that client.
 
 By default, **all networked objects always transmit to all Connections**, unless you explicitly disable this behaviour.
 

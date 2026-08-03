@@ -50,7 +50,7 @@ Now we can call `GetMetadata(key, fallback)` on any SceneFile, so let's create a
         <div class="scenes">
             @foreach( var scene in group )
             {
-                <div Tooltip=@( x.GetMetadata("Description") )>@( x.GetMetadata( "Title" ) )</div>
+                <div Tooltip=@( scene.GetMetadata("Description") )>@( scene.GetMetadata( "Title" ) )</div>
             }
         </div>
     </div>

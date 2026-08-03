@@ -30,4 +30,4 @@ Standalone games have no code whitelist restrictions and some additional APIs. S
 2. Click **Export…**
 3. Set your icon, splash screen, and Steam App ID
 4. Click **Next** and wait for the export to complete
-5. Your executable will be in the output folder — click **Open Folder** to find it
+5. Your executable will be in the output folder, click **Open Folder** to find it

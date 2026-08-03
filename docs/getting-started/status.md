@@ -23,7 +23,7 @@ Here's the current status of key features and missing functionality you'll run i
 | Hammer/Maps | 🟢 Create + Load maps, brushwork, props, lights, select + launch map in game<br>🟢 Can use GameObjects |
 | VR   | 🟢 Easy to develop for, built-in components<br>🟠 Accessibility, user experience needs work, needs more testing |
 | Particles | 🟢 Create particle effects, emitters, sprite rendering, model rendering, trails, lights, velocity, collision<br>🟢 Totally moddable and extendable<br>🟠 No built in line renderer, motion vectors, normals |
-| Standalone | 🟢 Can export games to standalone 🟠 Need explicit license from Facepunch + Valve to distribute |
+| Standalone | 🟢 Can export games to standalone<br>🟠 Need explicit license from Facepunch + Valve to distribute |
 | Physics | 🟢 Full 3D and 2D physics, great performance + stability |
 | Editor | 🟢 Scene editor, editor tools, inspector, editor apps, key re-binding |
 | 2D   | 🟢 2D physics, ortho camera<br>🟠 Basic sprite support<br>🔴 No 2d editor mode |

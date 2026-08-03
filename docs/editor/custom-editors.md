@@ -7,7 +7,7 @@ updated: 2025-04-30
 
 # Custom Editors
 
-When creating your own Classes/Structs/Assets/ect, you'll sometimes want custom editors that pair with them. For example, a Gradient Editor so you can visually see what the Gradient looks like instead of editing the Gradient as if it were a Struct with a list of Colours.
+When creating your own Classes/Structs/Assets/etc, you'll sometimes want custom editors that pair with them. For example, a Gradient Editor so you can visually see what the Gradient looks like instead of editing the Gradient as if it were a Struct with a list of Colours.
 
 ![With a Custom Editor](./images/with-a-custom-editor.png) ![Without a Custom Editor](./images/without-a-custom-editor.png)
 

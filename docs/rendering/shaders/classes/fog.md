@@ -2,7 +2,7 @@
 title: "Fog"
 icon: "🌁"
 created: 2024-12-08
-updated: 2026-06-10
+updated: 2026-08-03
 ---
 
 # Fog
@@ -29,7 +29,7 @@ If you only need specific fog effects, see the functions below.
 ## Gradient Fog
 
 ```cpp
-ApplyGradientFog( inout float3 Color, float3 WolrdPosition, float3 PositionToCamera );
+float3 ApplyGradientFog( float3 Color, float3 WorldPosition, float3 PositionToCamera );
 ```
 
 For both **gradient** and **cubemap** fog, you need to calculate `PositionToCamera`. This can be done by simply subtracting world-space camera position from pixel world position:
@@ -41,11 +41,13 @@ float3 PositionToCamera = worldPos.xyz - g_vCameraPositionWs;
 ## Cubemap Fog
 
 ```cpp
-ApplyCubemapFog( float3 Color, float3 WolrdPosition, float3 PositionToCamera );
+float3 ApplyCubemapFog( float3 Color, float3 WorldPosition, float3 PositionToCamera );
 ```
 
 ## Volumetric Fog
 
 ```cpp
-ApplyVolumetricFog( float3 Color, float3 WorldPosition, float2 ScreenPosition );
+float3 ApplyVolumetricFog( float3 Color, float3 WorldPosition, float2 ScreenPosition );
 ```
+
+Each of these returns the fogged colour, they don't modify their input.

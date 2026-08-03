@@ -2,7 +2,7 @@
 title: "Code Generation"
 icon: "🧞"
 created: 2023-11-19
-updated: 2026-07-17
+updated: 2026-08-03
 ---
 
 # Code Generation
@@ -13,7 +13,7 @@ s&box has a `[CodeGenerator]` attribute that you can use to decorate another att
 
 # Examples
 
-[The Scene System] uses CodeGen for Broadcast RPCs, it could also be used for creating networked variables.
+The [scene system](/scene/index.md) uses CodeGen for Broadcast RPCs, it could also be used for creating networked variables.
 
 ## RPCs
 
@@ -148,12 +148,12 @@ public class MyObject
 
 ## Different Return Types
 
-If you want to handle specific return types you can also do that. The crucial part is that instead of the first parameter of the callback method being an `Action` it would be a `Func<T>` instead.
+If you want to handle specific return types you can also do that. The crucial part is that the callback takes a `WrappedMethod<T>` instead of a `WrappedMethod`, and returns `T`. Calling `m.Resume()` then gives you the return value of the original method.
 
 ```csharp
 public class MyObject
 {
-	internal T OnMethodInvoked( WrappedMethod<T> m )
+	internal T OnMethodInvoked<T>( WrappedMethod<T> m )
 	{
 		return m.Resume();
 	}
@@ -180,7 +180,7 @@ Similarly to wrapping methods, the callback method can handle any generic proper
 :::
 
 
-When wrapping the setter of properties the callback method should have 3 parameters. The first is the property name, the second is the value that the property *wants* to be set to, and the third is an `Action` that will call the original setter function.
+When wrapping the setter of properties the callback method takes a single `WrappedPropertySet<T>`. It gives you the property name, the value that the property *wants* to be set to, and a `Setter` action that will call the original setter function.
 
 ```csharp
 public void OnWrapSet<T>( WrappedPropertySet<T> p )
@@ -190,7 +190,7 @@ public void OnWrapSet<T>( WrappedPropertySet<T> p )
 ```
 
 
-When wrapping the getter of properties, the callback method should have a return type and 2 parameters. The first being the property name and the second being the value that the getter *would have* returned usually.
+When wrapping the getter of properties, the callback method returns `T` and takes a single `WrappedPropertyGet<T>`. It gives you the property name and the value that the getter *would have* returned usually.
 
 ```csharp
 public T OnWrapGet<T>( WrappedPropertyGet<T> p )
@@ -242,7 +242,7 @@ public static class MyStaticClass
 
   internal static T OnWrapAnything<T>( WrappedPropertyGet<T> p )
   {
-    return value;
+    return p.Value;
   }
 
   internal static void OnWrapAnything( WrappedMethod m, params object[] args )
@@ -250,9 +250,9 @@ public static class MyStaticClass
     m.Resume();
   }
 
-  internal static T OnWrapAnything( WrappedMethod<T> m, params object[] args )
+  internal static T OnWrapAnything<T>( WrappedMethod<T> m, params object[] args )
   {
-    m.Resume();
+    return m.Resume();
   }
 }
 ```

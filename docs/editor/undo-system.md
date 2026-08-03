@@ -23,7 +23,7 @@ var undoScope = SceneEditorSession.Active.UndoScope( "Your Action Name" );
 ```
 
 ```csharp
-// Push() will turn the scope into an disposable
+// Push() will turn the scope into a disposable
 using ( SceneEditorSession.Active.UndoScope( "Your Action Name" ).Push() )
 {
   // Actions that modify the scene
@@ -60,8 +60,6 @@ Captures all children of the object, this can become very expensive for complex 
 * `GameObjectUndoFlags.All`
 Shortcut to capture everything
 
-  \
-
 ```csharp
 using var undoScope = SceneEditorSession.Active.UndoScope( "Your Action Name" )
   .WithGameObjectChanges( gameObject, GameObjectUndoFlags.Properties | GameObjectUndoFlags.Components)
@@ -69,7 +67,7 @@ using var undoScope = SceneEditorSession.Active.UndoScope( "Your Action Name" )
 ```
 
 
-To capture GameObject creation you can use `GameObjectCreations()`.
+To capture GameObject creation you can use `WithGameObjectCreations()`.
 
 ```csharp
 using ( SceneEditorSession.Active.UndoScope( "Create Empty" ).WithGameObjectCreations().Push() )
@@ -167,7 +165,7 @@ public class BoxColliderTool : EditorTool<BoxCollider>
 			{
 				if ( _componentUndoScope == null )
 				{
-                   // Create scope if it not exists
+                   // Create the scope if it does not exist yet
 					_componentUndoScope = SceneEditorSession.Active.UndoScope( "Resize Box Collider" )
                                             .WithComponentChanges( boxCollider )
                                             .Push();
@@ -176,7 +174,7 @@ public class BoxColliderTool : EditorTool<BoxCollider>
 				boxCollider.Scale = newBox.Size;
 			}
    
-            // Dispose scope when mouse is release
+            // Dispose the scope when the mouse is released
 			if ( Gizmo.WasLeftMouseReleased )
 			{
 				_componentUndoScope?.Dispose();

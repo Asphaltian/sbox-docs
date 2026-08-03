@@ -21,7 +21,6 @@ This would eventually be moved to a `Vertex` or inside `PixelInput` class that w
     * Normals, Tangents from transformation
 * `FinalizeVertex( PixelInput o )`
   * Does post-processing for the vertex, converts the position on the world to what's displayed on the screen ( Projection Space )
-  * \
 
 You're expected to commonly use these on start and end of the Vertex Block, and have any modifications of it in between them
 

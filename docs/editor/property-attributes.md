@@ -147,12 +147,12 @@ When used on a string property, creates a ResourceControlWidget allowing you to 
 
 ## `[FontName]`
 
-When used on a string property, creates a Font dropdown allowing you to easily select a font by it's name.
+When used on a string property, creates a Font dropdown allowing you to easily select a font by its name.
 
 
 ## `[InputAction]`
 
-When used on a string property, creates an Input dropdown comprised of all Inputs configured in your Project Settings, allowing you to easily select an Input by it's name.
+When used on a string property, creates an Input dropdown comprised of all Inputs configured in your Project Settings, allowing you to easily select an Input by its name.
 
 
 # Curve-Specific

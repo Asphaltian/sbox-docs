@@ -91,7 +91,7 @@ public partial class Clothing : GameResource
 		base.PostLoad();
 
         // Since you are constructing the list yourself, you could add your own logic here
-        // to create lists for All, AllHats, AllShirts, AllShoes, ect.
+        // to create lists for All, AllHats, AllShirts, AllShoes, etc.
 		if ( !_all.Contains( this ) )
 			_all.Add( this );
 	}

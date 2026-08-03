@@ -50,7 +50,7 @@ AmbientLight::FromEnvMapProbe( float3 WorldPosition, float4 PositionSs, float3 W
 
 ```
 
-## FromLightMapProbe
+## FromLightMapProbeVolume
 
 This will draw ambient light produced from lightmap probes.
 

@@ -12,7 +12,7 @@ A prefab is a GameObject that can be used in multiple places. They're usually us
 
 # Assets
 
-Prefabs are saved to disk as [PrefabFile]. These assets can be referenced in Components anywhere a [GameObject](/scene/gameobject.md) can be referenced. When the PrefabFile is updated, all instantiations of the prefab in scenes are updated, too.
+Prefabs are saved to disk as a `PrefabFile`. These assets can be referenced in Components anywhere a [GameObject](/scene/gameobject.md) can be referenced. When the PrefabFile is updated, all instantiations of the prefab in scenes are updated, too.
 
 To create a PrefabFile, right-click on a GameObject in the scene and select `Convert to Prefab`.
 
@@ -45,7 +45,7 @@ public sealed class MyGun : Component
         // throw an error if BulletPrefab wasn't defined
         Assert.NotNull( BulletPrefab );
         
-		if ( Input.Pressed( "Attack1" ) )
+		if ( Input.Pressed( "attack1" ) )
 		{
             // create a new instance of the bullet prefab at the gun's position
 			GameObject bullet = BulletPrefab.Clone( WorldPosition );

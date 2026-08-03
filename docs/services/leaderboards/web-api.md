@@ -7,7 +7,7 @@ updated: 2024-08-23
 
 # Web Api
 
-The API for leaderboards is publically accessible. Have fun!
+The API for leaderboards is publicly accessible. Have fun!
 
 
 ```none

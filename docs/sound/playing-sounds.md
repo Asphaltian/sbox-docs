@@ -55,7 +55,7 @@ Pass a world-space `Vector3` to place the sound in the scene:
 
 ```csharp
 Sound.Play( ExplosionSound, WorldPosition );
-Sound.Play( "sounds/explosion.sound", transform.Position );
+Sound.Play( "sounds/explosion.sound", WorldPosition );
 ```
 
 Without a position the sound defaults to the world origin `(0, 0, 0)`. For a sound that should follow an object, use `GameObject.PlaySound` instead (see below).

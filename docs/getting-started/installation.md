@@ -32,6 +32,6 @@ You can launch s&box in several ways:
 
 The s&box engine is open source and MIT licensed. If you'd rather build it yourself, you can compile and run the engine from source.
 
-Everything you need is in the [sbox-public repository](https://github.com/Facepunch/sbox-public) — clone it and follow the build steps in the README.
+Everything you need is in the [sbox-public repository](https://github.com/Facepunch/sbox-public), clone it and follow the build steps in the README.
 
 You only need this if you want to contribute to the engine or poke around its internals. For making games, installing through Steam is the recommended path.

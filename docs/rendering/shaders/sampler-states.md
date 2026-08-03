@@ -39,6 +39,7 @@ float4 color2 = MyOtherCoolTexture.Sample( MyPixelySampler, uv );
 Address mode affects how texture sampling is handled outside of 0-1 UV range. 
 
 | Address Mode | Description |
+|--------------|-------------|
 | Wrap | Repeats the texture infinitely |
 | Clamp | Extrudes the edges of texture infinitely |  
 | Border | Simply cuts off everything outside of 0-1 range |
@@ -52,13 +53,15 @@ Address mode affects how texture sampling is handled outside of 0-1 UV range.
 | Enum | Description |
 |------|-------------|
 | Point | Same as MinMagMipPoint |
+| Nearest | Same as MinMagMipPoint |
 | Bilinear | Same as MinMagLinearMipPoint |
 | Trilinear | Same as MinMagMipLinear |
 | Anisotropic | Anisotropic filtering, controlled by MaxAniso |
+| Aniso | Same as Anisotropic |
 | MinMagMipPoint | Minify/magnify/mipmap using point sampling. |
 | MinMagPointMipLinear | Minify/magnify using point sampling, mipmap using linear interpolation. |
 | MinPointMagLinearMipPoint | Minify using point sampling, magnify using linear sampling, mipmap using point sampling. |
-| MinPointMagMipLinear | Minify using point sampling, magnify using point sampling, mipmap using linear interpolation. |
+| MinPointMagMipLinear | Minify using point sampling, magnify using linear sampling, mipmap using linear interpolation. |
 | MinLinearMagMipPoint | Minify using linear interpolation, magnify using point sampling, mipmap using point sampling. |
 | MinLinearMagPointMipLinear | Minify using linear interpolation, magnify using point sampling, mipmap using linear interpolation. |
 | MinMagLinearMipPoint | Minify/magnify using linear sampling, mipmap using point sampling. |
@@ -66,7 +69,7 @@ Address mode affects how texture sampling is handled outside of 0-1 UV range.
 | ComparisonMinMagMipPoint | Comparison minify/magnify/mipmap using point sampling. |
 | ComparisonMinMagPointMipLinear | Comparison minify/magnify using point sampling, mipmap using linear interpolation. |
 | ComparisonMinPointMagLinearMipPoint | Comparison minify using point sampling, magnify using linear sampling, mipmap using point sampling. |
-| ComparisonMinPointMagMipLinear | Comparison minify using point sampling, magnify using point sampling, mipmap using linear interpolation. |
+| ComparisonMinPointMagMipLinear | Comparison minify using point sampling, magnify using linear sampling, mipmap using linear interpolation. |
 | ComparisonMinLinearMagMipPoint | Comparison minify using linear interpolation, magnify using point sampling, mipmap using point sampling. |
 | ComparisonMinLinearMagPointMipLinear | Comparison minify using linear interpolation, magnify using point sampling, mipmap using linear interpolation. |
 | ComparisonMinMagLinearMipPoint | Comparison minify/magnify using linear sampling, mipmap using point sampling. |

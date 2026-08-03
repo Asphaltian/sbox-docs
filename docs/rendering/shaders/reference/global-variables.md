@@ -31,7 +31,7 @@ These projection matrices are used for conversions between various coordinate sp
 |------|------|-------------|------------------|
 | `float4x4` | `g_matWorldToProjection` | Converts world-space coordinates to projection-space. In vertex shaders, it is common to convert world-space vertex position back to projection space before finalizing vertex manipulations | `Position4WsToPs`, `Position3WsToPs` |
 | `float4x4` | `g_matProjectionToWorld` | Converts projection-space coordinates to world-space. Used in `Depth::GetWorldPosition` to reconstruct world-space position of ray from depth buffer | ... |
-| `float4x4` | `g_matWorldToProjection` | Converts world-space coordinates to view-space. This coordinate system is built relative to the camera, with it as the origin | `Position4WsToVs`, `Position3WsToVs` |
+| `float4x4` | `g_matWorldToView` | Converts world-space coordinates to view-space. This coordinate system is built relative to the camera, with it as the origin | `Position4WsToVs`, `Position3WsToVs` |
 | `float4x4` | `g_matViewToProjection` | Converts view-space coordinates to projection-space | `Position4VsToPs`, `Position3VsToPs` |
 | `float4x4` | `g_matProjectionToView` | Converts projection-space coordinates to view space | ... |
 | `float4x4` | `g_matCurrFrameViewToPrevFrameProj` | Converts view-space coordinates of current frame to projection-space coordinates of previous frame | `ReprojectFromLastFrameSs` |

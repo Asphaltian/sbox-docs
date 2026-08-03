@@ -2,12 +2,12 @@
 title: "Assets"
 icon: "🎎"
 created: 2025-06-15
-updated: 2026-04-10
+updated: 2026-08-03
 ---
 
 # Assets
 
-Assets are the building blocks of your game — models, materials, sounds, textures, and custom resources. S&box provides tools for creating, importing, managing, and distributing assets.
+Assets are the building blocks of your game: models, materials, sounds, textures, and custom resources. S&box provides tools for creating, importing, managing, and distributing assets.
 
 ## [Clothing](/assets/clothing/index.md)
 
@@ -20,6 +20,10 @@ Built-in assets provided by s&box, including Citizen characters and first-person
 ## [Resources](/assets/resources/index.md)
 
 Custom asset types, cloud assets, binary serialization, and GameResource extensions.
+
+## [Naming Conventions](/assets/naming-conventions.md)
+
+Texture suffixes the editor uses to auto-assign textures in a Material.
 
 ## [File System](/assets/file-system.md)
 

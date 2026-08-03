@@ -2,7 +2,7 @@
 title: "Component Methods"
 icon: "👷"
 created: 2023-12-28
-updated: 2026-06-08
+updated: 2026-08-03
 ---
 
 # Component Methods
@@ -27,6 +27,16 @@ If your component is doing something special, such as generating a procedural le
 protected override async Task OnLoad()
 {
 	LoadingScreen.Title = "Loading Something..";
+	await Task.DelayRealtimeSeconds( 1.0f );
+}
+```
+
+There's also an overload that gives you a `LoadingContext`, so you can title your own task instead of stomping the whole loading screen.
+
+```csharp
+protected override async Task OnLoad( LoadingContext context )
+{
+	context.Title = "Generating Level..";
 	await Task.DelayRealtimeSeconds( 1.0f );
 }
 ```

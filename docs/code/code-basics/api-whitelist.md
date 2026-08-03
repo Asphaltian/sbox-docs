@@ -9,7 +9,7 @@ updated: 2025-07-18
 
 We prevent access to classes and functions that could be used maliciously by whitelisting what can be used.
 
-When playing s&box, any code that doesn't pass these checks **will not** be loaded. In the editor, the compiler will generate a `SB1000 Whitelist Error: ``*'x' is not allowed when whitelist is enabled*`.
+When playing s&box, any code that doesn't pass these checks **will not** be loaded. In the editor, the compiler will generate an error: `SB1000: 'x' is not allowed when whitelist is enabled`.
 
 Editor code, including libraries, doesn't have to follow these restrictions. If you are developing a standalone game, you can opt out, but you won't be able to publish to the platform while the whitelist is disabled. 
 
@@ -34,4 +34,4 @@ Here are some of the common ones to help new devs. Check out our full API refere
 | ❌ Not allowed | ✅ Allowed |
 |---------------|-----------|
 | `Console.WriteLine` | Use `Log.Info` as a drop-in replacement. |
-| `System.IO*`  | Most standard .NET IO isn't allowed, but you can use our [Filesystem](https://sbox.game/dev/doc/assets/file-system/) API for storage of user data. |
+| `System.IO*`  | Most standard .NET IO isn't allowed, but you can use our [Filesystem](/assets/file-system.md) API for storage of user data. |

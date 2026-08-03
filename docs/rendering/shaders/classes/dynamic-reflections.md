@@ -12,7 +12,7 @@ Much like SSAO, you can composite dynamic specular reflections on your object, w
 You can use it directly by sampling on your shader:
 
 ```cpp
-float3 DynamicReflections::Sample( float4 ScreenPosition, float Roughness )
+float4 DynamicReflections::Sample( float2 ScreenPosition, float Roughness = 0.0f )
 ```
 
 
@@ -29,6 +29,8 @@ commands.SetGlobal( "ReflectionColorIndex", PlanarReflection.ColorIndex );
 
 
 Roughness parameter when sampling will optionally get a specific mip level from your texture from `0.0f` to `1.0f` to composite with variable blurriness based on how rough the overlayed material is
+
+`DynamicReflections::IsEnabled()` tells you whether there's a reflection texture bound at all, so you can skip the work when there isn't.
 
 ## Overriding Indirect Specular Reflections For Disabling
 

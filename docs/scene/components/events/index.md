@@ -15,7 +15,7 @@ These events aren't sent over the network. They are sent to **active** Component
 
 An event class is just a regular interface. You don't need to do anything else.
 
-```javascript
+```csharp
 public interface IPlayerEvent
 {
 	void OnSpawned( Player player );
@@ -28,7 +28,7 @@ Scene.RunEvent<IPlayerEvent>( x => x.OnSpawned( playerThatSpawned ) );
 ```
 
 
-You can, however, derive from `ISceneEvent<T>`. This gives you a bit nicer syntax. Internally this is just calling Scene.Run on the active scene.
+You can, however, derive from `ISceneEvent<T>`. This gives you a bit nicer syntax. Internally this is just calling `Scene.RunEvent` on the active scene.
 
 ```csharp
 public interface IPlayerEvent : ISceneEvent<IPlayerEvent>
@@ -90,7 +90,7 @@ Scene.RunEvent<IDamageProvider>( x => x.GetDamagePoint( damagePoints ) );
 To listen, you just implement the interface you want to use. This could be an interface you have created, or could be one of the built in event classes.
 
 
-```javascript
+```csharp
 // A component with the ISceneLoadingEvents interface, 
 // for listening to scene load events.
 public class MyComponent : Component, ISceneLoadingEvents
@@ -103,7 +103,7 @@ public class MyComponent : Component, ISceneLoadingEvents
 ```
 
 
-```javascript
+```csharp
 //
 // A camera component weapon, which listens to IPlayerEvent.
 //

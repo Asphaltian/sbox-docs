@@ -69,7 +69,7 @@ The context menu for time selections has a ton of extra editing actions.
 
 #  ![](./images/clipboard-actions.png)Additive Editing
 
-When pasting a time selection, you can additively layer track data over the existing animation. This is enabled by default, can can be disabled by clicking the *Additive* button in the toolbar while modifications are active.
+When pasting a time selection, you can additively layer track data over the existing animation. This is enabled by default, and can be disabled by clicking the *Additive* button in the toolbar while modifications are active.
 
 
 ![Additive editing with layers](./images/additive-editing-with-layers.mp4)

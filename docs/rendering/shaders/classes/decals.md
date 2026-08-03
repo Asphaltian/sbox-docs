@@ -9,15 +9,15 @@ updated: 2026-06-22
 
 **Decals** is a class that handles whole process of rendering decals on scene. Usually you may need to use this class if you are building a custom shading model and you want it to support decal rendering. You don't have to use this function if your shader passes all data into a standard shading model, it already handles decals.
 
-## ::From
+## ::Apply
 
 ```cpp
-Decals::From( float3 WorldPosition, in out Material material )
+void Decals::Apply( float3 WorldPosition, in out Material material )
 ```
 
 * `WorldPosition` is the world-space pixel position
 * `Material` is the material that you built in the main shader. Decals iterate over the existing material, they are applied on top of it. `in out` means that it will automatically write new changes to the material variable that you pass into this function.
-* * Make sure that your `ScreenPosition` in the material struct is not empty!
+  * Make sure that your `ScreenPosition` in the material struct is not empty!
 
 This is everything that you need to know about decals if you want to add them in your shader code. If you are curious about the internal stuff, you're welcome to continue reading. 
 
@@ -25,7 +25,7 @@ This is everything that you need to know about decals if you want to add them in
 
 ### Counting Available Decals 
 
-All decals are culled using the **clustered culling**. To check how many decals are avaiable in the current cluster, you do this:
+All decals are culled using the **clustered culling**. To check how many decals are available in the current cluster, you do this:
 
 ```cpp
 ClusterRange range = Cluster::Query( ClusterItemType_Decal, ScreenPosition );
@@ -48,7 +48,7 @@ for ( uint j = 0; j < range.Count; j++ )
 
 ## Decal Data Structure
 
-All decals are stored in a global structured buffer called **DecalsBuffer**. Each decal instance stores following data:
+All decals are stored in a global structured buffer called **DecalBuffer** (bound to the `DecalsBuffer` attribute). Each decal instance stores following data:
 
 ```cpp
 struct Decal
@@ -97,7 +97,7 @@ float4 vColorTint = UnpackColor( decal.ColorTint );
 float3 vSignedRGB = vColorTint.rgb * 255.0 - 128.0;
 
 // Apply exponent to the color tint
-vColorTint.rgb = vSignedRGB * exp2( float( exp ) - 128.0 - 7.0 );
+vColorTint.rgb = vSignedRGB * exp2( float( nColorExponent ) - 128.0 - 7.0 );
 ```
 
 ### Helper Struct Functions
@@ -159,14 +159,14 @@ Height Coverage settings are encoded in a single **uint**. Use the example below
 ```cpp
 // Height coverage is available ONLY if decal has a valid height texture!
 // So make sure to get these values after checking for valid heightmap first.
-if ( nHeightmapBindlessId > 0 )
+if ( nHeightBindlessID > 0 )
 {
 	// Load height coverage settings from extra buffer
-	uint nHeightCoverageSettingsPacked = DecalsExtraDataBuffer.Load( decal.ExtraDataOffset + 48 );
+	uint nHeightCoverageSettings = DecalsExtraDataBuffer.Load( decal.ExtraDataOffset + 48 );
 
 	// Decode settings and get coverage amount & range from them
-	float flCoverageAmount = 1.0f - (( heightCoverageSettings & 0xFF ) / 255.0);
-	float flCoverageRange = ( ( heightCoverageSettings >> 8 ) & 0xFF ) / 255.0;
+	float flCoverageAmount = 1.0f - (( nHeightCoverageSettings & 0xFF ) / 255.0);
+	float flCoverageRange = ( ( nHeightCoverageSettings >> 8 ) & 0xFF ) / 255.0;
 }
 ```
 

@@ -7,7 +7,7 @@ updated: 2025-06-15
 
 # Shaders
 
-Writing shaders in code for s&box — HLSL in a VFX wrapper that combines vertex and pixel stages, with hot reloading on save.
+Writing shaders in code for s&box: HLSL in a VFX wrapper that combines vertex and pixel stages, with hot reloading on save.
 
 ## [Getting Started](/rendering/shaders/getting-started.md)
 

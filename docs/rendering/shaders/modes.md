@@ -27,8 +27,9 @@ MODES
 
 ## Supported Modes
 
+| Mode | Description |
+|------|-------------|
 | `Default` | Used for compute shaders |
-|---------|--------------------------|
 | `Forward` | Standard rendering       |
 | `Depth` | Depth prepass, shadows   |
 | `ToolsShadingComplexity` | Shows Quad Overdraw      |

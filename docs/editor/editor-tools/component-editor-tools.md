@@ -11,7 +11,7 @@ Component Editor Tools work a lot like regular Editor Tools, but they're always 
 
 ![The camera preview is created using a Component EditorTool](./images/the-camera-preview-is-created-using-a-component-editortool.png)
 
-An example of a component tool is the camera preview - which is shown when a [GameObject](/scene/gameobject.md) with a CameraComponent is shown.
+An example of a component tool is the camera preview - which is shown when a [GameObject](/scene/gameobject.md) with a CameraComponent is selected.
 
 # Defining
 

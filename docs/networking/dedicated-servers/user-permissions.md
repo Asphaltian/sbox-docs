@@ -41,7 +41,7 @@ On your Dedicated Server, you can edit the `config/users.json` file to add speci
 Claims are strings which describe actions that a user can take. You can add your own custom claims, as they're just strings.
 
 
-The host can check if a specific [Connection](https://sbox.game/dev/api/Sandbox.Connection) has a permission with `Connection.HasPermission( string )`. By default, the host has all permissions.
+The host can check if a specific [Connection](https://sbox.game/api/Sandbox.Connection) has a permission with `Connection.HasPermission( string )`. By default, the host has all permissions.
 
 
 

@@ -7,7 +7,7 @@ updated: 2024-12-17
 
 # Cloud Assets
 
-There is a large selection of Assets (Textures, Models, Sounds, ect) available to use on sbox.game, and you can use them without needing to think about downloading the files/mounting the content/ect.
+There is a large selection of Assets (Textures, Models, Sounds, etc) available to use on sbox.game, and you can use them without needing to think about downloading the files/mounting the content/etc.
 
 # Cloud Browser
 
@@ -46,12 +46,12 @@ static async Task<Model> DownloadModel( string packageIdent )
   if( package == null || package.Revision == null )
   {
     // Package not found
-    return;
+    return null;
   }
   // If the package was found, mount it (download the content)
   await package.MountAsync();
   
-  // Get the path to the primary asset (vmdl for Model, vsnd for Sound, ect.)
+  // Get the path to the primary asset (vmdl for Model, vsnd for Sound, etc.)
   var primaryAsset = package.GetMeta( "PrimaryAsset", "" );
   return Model.Load( primaryAsset );
 }

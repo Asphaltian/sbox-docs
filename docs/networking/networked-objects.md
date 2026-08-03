@@ -53,7 +53,7 @@ Sometimes you want to clear any interpolation for an object. You can do that wit
 One use case for this would be to set the position of the object and have the position updated immediately for everybody without interpolation (teleporting.)
 
 ```csharp
-Transform.Position = Vector3.Zero;
+WorldPosition = Vector3.Zero;
 Network.ClearInterpolation();
 ```
 

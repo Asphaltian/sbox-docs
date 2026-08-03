@@ -17,7 +17,7 @@ A Scene is your game world. Everything that renders and updates at one time shou
 
 ## [GameObjects](/scene/gameobject.md)
 
-A scene contains GameObjects — world objects with a position, rotation, and scale. They can be arranged in a hierarchy so children move relative to their parents.
+A scene contains GameObjects: world objects with a position, rotation, and scale. They can be arranged in a hierarchy so children move relative to their parents.
 
 ## [Components](/scene/components/index.md)
 
@@ -25,7 +25,7 @@ GameObjects contain Components that provide modular functionality. A ModelRender
 
 ## [GameObjectSystem](/scene/gameobjectsystem.md)
 
-Systems that operate on GameObjects across an entire scene — useful for game managers and global logic.
+Systems that operate on GameObjects across an entire scene, useful for game managers and global logic.
 
 ## [Prefabs](/scene/prefabs/index.md)
 

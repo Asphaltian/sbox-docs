@@ -7,7 +7,7 @@ updated: 2026-01-16
 
 # Binary Serialization
 
-In the event that you find your JSON files growing too much due to too much data. You can store data as a binary blob. This will work with anything that serializes to JSON.
+If you find your JSON files growing too large, you can store data as a binary blob instead. This works with anything that serializes to JSON.
 
 ## Creating a binary blob
 

@@ -20,7 +20,7 @@ float3 Normals::Sample( int2 ScreenPosition )
 ```
 
 ```cpp
-float3 Roughness::Sample( int2 ScreenPosition )
+float Roughness::Sample( int2 ScreenPosition )
 ```
 
 If the object in that texel does not write to the G-buffer, then it reconstructs normal maps from it
@@ -30,8 +30,8 @@ If the object in that texel does not write to the G-buffer, then it reconstructs
 You can write to G-Buffer yourself, if you are writing your own custom shading model, or need to do this for any other reason. Just like it's mentioned above, make sure your shader has `Depth()` mode enabled.
 
 ```cpp
-if( DepthNormal::WantsDepthNormal() )
-    return DepthNormal::Output( float3 Normal, float Roughness, float Opacity );
+if ( DepthNormals::WantsDepthNormals() )
+    return DepthNormals::Output( Normal, Roughness, Opacity );
 ```
 
 * `DepthNormals::WantsDepthNormals()` will check if we're in the appropriate mode for writing to g-buffer. (depth prepass, `S_MODE_DEPTH == 1`)

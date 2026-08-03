@@ -12,10 +12,10 @@ updated: 2025-06-16
 A **Vector** is just a set of numbers that describe a position or a direction in space. 
 
 
-* **Vector2** – for flat 2D stuff (like a screen): x and y.
-* [**Vector3**](https://sbox.game/api/Vector3) – for 3D stuff: x, y, z.
-* **Vector4** – same as Vector3 but with a bonus W value. Used commonly for shaders, or margins, or borders, or corners.
-* **Vector2Int + Vector3Int** – like normal, but with whole numbers only.
+* **Vector2** - for flat 2D stuff (like a screen): x and y.
+* [**Vector3**](https://sbox.game/api/Vector3) - for 3D stuff: x, y, z.
+* **Vector4** - same as Vector3 but with a bonus W value. Used commonly for shaders, or margins, or borders, or corners.
+* **Vector2Int + Vector3Int** - like normal, but with whole numbers only.
 
 
 ```csharp

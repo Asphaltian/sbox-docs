@@ -34,7 +34,7 @@ SamplerState Bindless::GetSampler( int nIndex );
 sRGB variants of Texture2D can be sampled with Bindless::GetTexture2D( nIndex, true );
 :::
 
-Additionally these methods are avaliable in compute shaders only:
+Additionally these methods are available in compute shaders only:
 
 ```cpp
 RWTexture2D<float4> Bindless::GetRWTexture2D( int nIndex );
@@ -54,7 +54,7 @@ struct TerrainMaterial
 }
 
 GpuBuffer<TerrainMaterial> TerrainMaterialsBuffer = new( 1 );
-TerrainsMaterialBuffer.SetData( new[] {
+TerrainMaterialsBuffer.SetData( new[] {
   new TerrainMaterial {
     ColorTextureIndex = ColorTexture.Index,
     NormalTextureIndex = NormalTexture.Index
@@ -70,7 +70,7 @@ struct TerrainMaterial
 {
   int ColorTextureIndex;
   int NormalTextureIndex;
-}
+};
 
 StructuredBuffer<TerrainMaterial> TerrainMaterials < Attribute( "TerrainMaterials" ); >;
 
@@ -110,8 +110,10 @@ int g_nMyBindlessSamplerId < Attribute( "MyBindlessSamplerIndex" ); Default( -1 
 
 float4 MainPs( PixelInput i ) : SV_Target0
 {
-  SamplerState sBindlessSampler = Bindless::GetSampler( MyBindlessSamplerIndex );
-  float3 MyTexture = g_tColor.Sample( sBindlessSampler, i.vTextureCoords.xy ).rgb;
+  SamplerState sBindlessSampler = Bindless::GetSampler( g_nMyBindlessSamplerId );
+  float3 vColor = g_tColor.Sample( sBindlessSampler, i.vTextureCoords.xy ).rgb;
+
+  return float4( vColor, 1.0f );
 }
 ```
 

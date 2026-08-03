@@ -238,7 +238,7 @@ With these parameters at your disposal, there are three ways you can implement g
 # Tags
 
 
-Animgraphs can use "Internal Tags" for various purposes (letting parts of the graph communicate with one another without spaghetti wiring) — but there are also "Event Tags" that are sent to the game code to let it know about various events. The most common example is changing the bodygroup of a mesh mid-reload animation, so that a held empty magazine becomes full again.
+Animgraphs can use "Internal Tags" for various purposes (letting parts of the graph communicate with one another without spaghetti wiring), but there are also "Event Tags" that are sent to the game code to let it know about various events. The most common example is changing the bodygroup of a mesh mid-reload animation, so that a held empty magazine becomes full again.
 
 
 ![](./images/tags.png)
@@ -293,6 +293,6 @@ Under `🦴weapon_root`, there's `🦴weapon_root_children`, and under that one,
 
 There are two IK bones under `🦴weapon_root`, one for each hand.
 
-The control rig used to create animation has these bones constrained to be at the same position and orientation as the hand bones, and this data is baked out during export, when the exporter "flattens" the animation by making every frame a keyframe. This means that the weapon knows where the hands should be relative to itself at any time — and the hands are always corrected back via IK in their animgraphs.
+The control rig used to create animation has these bones constrained to be at the same position and orientation as the hand bones, and this data is baked out during export, when the exporter "flattens" the animation by making every frame a keyframe. This means that the weapon knows where the hands should be relative to itself at any time, and the hands are always corrected back via IK in their animgraphs.
 
 From there, it becomes very easy to apply various layers and additives (like movement bobbing) and have the hands always stick where they should be. Most of the time, only `🦴weapon_root` needs to move… and this means a lot of animations can be shared between guns!

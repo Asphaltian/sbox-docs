@@ -2,7 +2,7 @@
 title: "Light"
 icon: "💡"
 created: 2024-12-08
-updated: 2026-06-10
+updated: 2026-08-03
 ---
 
 # Light
@@ -42,20 +42,20 @@ struct Light
     // comes from the scene in the CPU. See below for more details. 
     BinnedLight LightData;
 
-    // Gets the light structure given the screen-space and world position and
+    // Gets the light structure given the world and screen-space position and
     // the light index.
-    static Light From( float4 vPositionSs, float3 vPositionWs, uint nLightIndex );
+    static Light From( float3 vPositionWs, float4 vPositionSs, uint nLightIndex );
     
     // Number of lights in the current fragment.
-    static uint Count( float2 vPositionSs );
+    static uint Count( float4 vPositionSs );
 };
 ```
 ### Iterating over all lights
 
 ```cpp
-for( int i=0; i < Light::Count(); i++ )
+for( uint i = 0; i < Light::Count( ScreenPosition ); i++ )
 {
-    Light l = Light::From( ScreenPosition, WorldPosition, i );
+    Light l = Light::From( WorldPosition, ScreenPosition, i );
     ...
 }
 ```
@@ -78,10 +78,10 @@ LightData.IsTransmissiveEnabled();
 
 ```cpp
 // Iterate through every available light source in cluster
-for( int i = 0; i < Light::Count(); i++ )
+for( uint i = 0; i < Light::Count( ScreenPosition ); i++ )
 {
     // Get the light object for current iteration 
-    Light light = Light::From( ScreenPosition, WorldPosition, i );
+    Light light = Light::From( WorldPosition, ScreenPosition, i );
 
     // Check if current light has diffuse enabled
     if ( light.LightData.IsDiffuseEnabled() )
@@ -157,8 +157,8 @@ This is the raw, internal information of lights that comes from the scene in the
 ```cpp
 class BinnedLight
 {
-    uint Type;          // 1 = spot, 2 = point, 3 = rect, etc..
-    LightShape Shape;  
+    uint Type;          // See the LightType enum above
+    LightShape Shape;   // Sphere, Capsule, Rectangle, etc...
     uint Flags;
 
     float4x4 LightToWorld;

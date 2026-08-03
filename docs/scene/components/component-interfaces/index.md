@@ -52,7 +52,7 @@ A component with this interface can react to physics collisions.
 | Method | Description |
 |--------|-------------|
 | `OnCollisionStart` | Called when this collider/rigidbody starts touching another collider. |
-| `OnCollisionUpdate` | Called once per physics step for every collider being touched. |
+| `OnCollisionUpdate` | Called once per physics step for every collider being touched, while the collision is awake. Sleeping contacts don't send updates - use `Collider.Touching` to track resting contacts. |
 | `OnCollisionStop` | Called when this collider/rigidbody stops touching another collider. |
 
 

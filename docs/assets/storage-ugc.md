@@ -42,11 +42,11 @@ saveEntry.SetThumbnail( thumbnail );
 
 Each entry has the following public properties:
 
-* `**Id**` - A unique identifier (GUID) for this entry
-* `**Type**` - The category type (e.g., "save", "dupe")
-* `**Created**` - When this entry was created
-* `**Files**` - A `BaseFileSystem` for reading and writing files
-* `**Thumbnail**` - The thumbnail image as a `Texture`
+* `Id` - A unique identifier (GUID) for this entry
+* `Type` - The category type (e.g., "save", "dupe")
+* `Created` - When this entry was created
+* `Files` - A `BaseFileSystem` for reading and writing files
+* `Thumbnail` - The thumbnail image as a `Texture`
 
 ### Working with Files
 

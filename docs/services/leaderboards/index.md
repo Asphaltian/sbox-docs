@@ -79,7 +79,7 @@ If you don't set a date period, it'll use the current date
 
 ## Centering
 
-You can focus the leaderboard on a certain player. This will show the results around that player. It is nice to show a player's contemperies rather than showing the top 20 all the time.
+You can focus the leaderboard on a certain player. This will show the results around that player. It is nice to show a player's contemporaries rather than showing the top 20 all the time.
 
 ```csharp
 var board = Sandbox.Services.Leaderboards.GetFromStat( "facepunch.ss1", "zombies_killed" );

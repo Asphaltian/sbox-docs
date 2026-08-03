@@ -45,9 +45,13 @@ Very much like Depth::Get, except the result is already normalized between 0 and
 
 Return the position in world coordinates of the passed in screenspace position.
 
-## Depth::Linearize( float d )
+## Depth::Linearize( float d, float2 ss = -1 )
 
 * Converts a raw value of the depth buffer into one in view space, with world units of distance away from the camera
+
+## Depth::WorldPosition( float d, float3 direction )
+
+* Reconstructs a world position from a depth value and a ray direction, for when you already have both and don't need the extra buffer read that `GetWorldPosition` does.
 
 ## Depth::GetLinear( float2 ss )
 
@@ -64,7 +68,7 @@ float3 fogColor = float3( 0.1f, 0.1f, 0.1f );
 float fogRange = 100.0f;
 
 float3 surfacePos = m.WorldPosition;
-float3 depthPos   = Depth::GetWorldPosition( m.ScreenPosition );
+float3 depthPos   = Depth::GetWorldPosition( m.ScreenPosition.xy );
 
 float dist = distance( surfacePos, depthPos );
 

@@ -33,7 +33,7 @@ Input.Pressed( "jump" ) // key was just pressed this frame
 Input.Released( "jump" ) // key was just released this frame
 
 Input.AnalogMove // joystick "move" input Vector3 (or wsad)
-Input.AnalogLook // Joystick "look" input Vector3 (mouse look)
+Input.AnalogLook // joystick "look" input Angles (or mouse look)
 ```
 
 

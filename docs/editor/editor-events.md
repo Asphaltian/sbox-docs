@@ -172,7 +172,7 @@ void OnExternalChangesPostLoad( GameResource resource ) { }
 | `paintoverlay` |           | When highlighting a Panel in the "UI Panels" tab |
 | `qt.mousepressed` |           | When the Editor receives a mouse event |
 | `gameframe.statusbar` | StatusBar | When the status bar is being built<br>(Used to add your own Widgets) |
-| `tools.headerbar.build` | HeadBarEvent | When the header bar is build built<br>(Used to add your own Widgets) |
+| `tools.headerbar.build` | HeadBarEvent | When the header bar is being built<br>(Used to add your own Widgets) |
 | `editor.preferences` | NavigationView | When the preferences widget is opened<br>(Used to add your own pages) |
 
 ### Tools
@@ -197,6 +197,6 @@ void OnExternalChangesPostLoad( GameResource resource ) { }
 | `actiongraph.createsubgraphmenu` | PopulateCreateSubGraphMenuEvent | When right clicking to create a sub-graph |
 | `actiongraph.outputplugmenu` | PopulateOutputPlugMenuEvent | When clicking and dragging out of an output plug |
 | `actiongraph.inputplugmenu` | PopulateInputPlugMenuEvent | When clicking and dragging out of an input plug |
-| `actiongraph.gotoplugsource` | GoToPlugSourceEvent | When double clicking on a plug to go to it's source |
+| `actiongraph.gotoplugsource` | GoToPlugSourceEvent | When double clicking on a plug to go to its source |
 | `actiongraph.inputlabel` | BuildInputLabelEvent | When building an input label |
 | `actiongraph.geteditorproperties` | GetEditorPropertiesEvent | Called when launching ActionGraph |

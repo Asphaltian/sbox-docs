@@ -22,7 +22,7 @@ When exporting, you can optionally enable motion smoothing at various strengths 
 
 ### Exposure
 
-This controls what fraction time for each frame the sensor is exposed for. *Very Fast* will expose the sensor for 1/12th of a frame, *Medium* is ½, and *Very Slow* makes the sensor always exposed for very blurry motion. *Instant* will disable motion smoothing.
+This controls what fraction of each frame the sensor is exposed for. *Very Fast* will expose the sensor for 1/12th of a frame, *Medium* is ½, and *Very Slow* makes the sensor always exposed for very blurry motion. *Instant* will disable motion smoothing.
 
 ### Motion Quality
 
