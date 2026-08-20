@@ -2,14 +2,16 @@
 title: "Connection Permissions"
 icon: "🔑"
 created: 2024-03-21
-updated: 2026-08-03
+updated: 2026-08-20
 ---
 
 # Connection Permissions
 
-The host can change some permissions for a specific `Connection`. The ideal place to set these permissions would be in the `OnActive` [network event.](/networking/network-events.md)
+The host can change some permissions for a specific `Connection`.
 
-Only the host can set these. They're all `true` by default, and the host always has them regardless of what you set.
+Defaults for all connections are set in **Project Settings > Networking**. To override them for a single connection, do it in the `OnActive` [network event.](/networking/network-events.md)
+
+Only the host can set these, and the host always has them regardless of what you set.
 
 | Permission | Controls |
 |------------|----------|
@@ -19,12 +21,12 @@ Only the host can set these. They're all `true` by default, and the host always 
 
 # Spawning Objects
 
-You can set `Connection.CanSpawnObjects` to allow or disallow a specific connection to create their own networked objects. By default this is `true`.
+You can set `Connection.CanSpawnObjects` to allow or disallow a specific connection to create their own networked objects. It defaults to the project setting.
 
 
 # Refreshing Objects
 
-By default only the host can send network refresh updates for networked objects. This can be changed to allow the owner of a networked object to also send these updates with `Connection.CanRefreshObjects`.
+`Connection.CanRefreshObjects` controls whether the owner of a networked object can send refresh updates for it. Turn it off if the host should be the only one sending these updates.
 
 
 # Destroying Objects

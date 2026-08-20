@@ -2,7 +2,7 @@
 title: "Getting Started"
 icon: "🌱"
 created: 2024-01-08
-updated: 2026-04-19
+updated: 2026-08-20
 ---
 
 # Getting Started
@@ -28,6 +28,21 @@ Nodes appear as rectangles in the ActionGraph editor with a name (or symbol), an
 
 
 ![Node creation menu.](./images/node-creation-menu.png)
+
+### Dragging Things Into The Graph
+
+You can also create a node by dragging something into empty space in the graph from another editor window.
+
+| What you drag | What you get |
+|---------------|--------------|
+| A GameObject from the scene tree | A node referencing that GameObject |
+| A Component from the scene tree or Inspector | A node referencing that Component |
+| A property row from the Inspector | A get/set node for that property |
+| An `.action` asset | A node that calls that ActionGraph |
+| A `.prefab` asset | A node referencing that prefab |
+| Any other asset | A node referencing that asset |
+
+This is usually faster than searching the node menu. To play a sound, drag in a `SoundPointComponent` and link to the members you want.
 
 ###  ![A root node with one signal socket and one value socket.](./images/a-root-node-with-one-signal-socket-and-one-value-socket.png)Root Node
 

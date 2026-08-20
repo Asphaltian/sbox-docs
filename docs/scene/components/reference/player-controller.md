@@ -2,7 +2,7 @@
 title: "Player Controller"
 icon: "🏃‍♀️"
 created: 2024-10-30
-updated: 2025-06-17
+updated: 2026-08-20
 ---
 
 # Player Controller
@@ -101,6 +101,11 @@ The animator feature is optional. Right click on the animator tab to disable it.
 		/// We pressed USE but it did nothing
 		/// </summary>
 		void FailPressing() { }
+
+		/// <summary>
+		/// We have a chance to do something before input is processed
+		/// </summary>
+		void PreInput() { }
 
 	}
 ```

@@ -2,7 +2,7 @@
 title: "File System"
 icon: "storage"
 created: 2024-09-26
-updated: 2025-06-15
+updated: 2026-08-20
 ---
 
 # File System
@@ -17,15 +17,15 @@ There are a few different File Systems available to use in your game. Each one w
 
 ## Data File System
 
-[FileSystem.Data](https://sbox.game/api/Sandbox.FileSystem.Data) is used to read and write data to a sub-directory specifically for the game that is currently running, i.e. `C:\steam\steamapps\common\sbox\data\org\game\`
+[FileSystem.Data](https://sbox.game/api/Sandbox.FileSystem/Data) is used to read and write data to a sub-directory specifically for the game that is currently running, i.e. `C:\steam\steamapps\common\sbox\data\org\game\`
 
 ## Mounted File System
 
-[FileSystem.Mounted](https://sbox.game/api/Sandbox.FileSystem.Mounted) is an aggregate filesystem of all mounted content from the core game, the current game and its dependencies.
+[FileSystem.Mounted](https://sbox.game/api/Sandbox.FileSystem/Mounted) is an aggregate filesystem of all mounted content from the core game, the current game and its dependencies.
 
 ## Organization File System
 
-[FileSystem.OrganizationData](https://sbox.game/api/Sandbox.FileSystem.OrganizationData) is a place to store user data across several games in your organization, i.e.
+[FileSystem.OrganizationData](https://sbox.game/api/Sandbox.FileSystem/OrganizationData) is a place to store user data across several games in your organization, i.e.
 
 `C:\steam\steamapps\common\sbox\data\org\`
 

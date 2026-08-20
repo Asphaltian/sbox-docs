@@ -2,7 +2,7 @@
 title: "Addon Project"
 icon: "🧩"
 created: 2024-10-03
-updated: 2024-10-03
+updated: 2026-08-20
 ---
 
 # Addon Project
@@ -10,6 +10,14 @@ updated: 2024-10-03
 An addon project adds to a Game Project. The addon project isn't published directly, you create assets and publish those individually.
 
 The general idea is that you are able to use the components and assets from a target game to create assets for that game. The asset could be a map, a model, a material or even a custom resource defined by that game.
+
+For example, to make a map for someone else's deathmatch game, you'd create an addon project targeting that game. You get their spawn points, weapon pickups and game rules to build with, and you publish just the map.
+
+Other common uses:
+
+- A model for a game that loads models from addons
+- A material pack for an existing game
+- A custom resource the game defines, like a card or a recipe
 
 
 
