@@ -1,6 +1,8 @@
 items:
 - name: Default Vertex and Pixel Shader Inputs
   href: default-vertex-and-pixel-shader-inputs.md
+- name: Vertex Input Semantics
+  href: vertex-input-semantics.md
 - name: Global Variables
   href: global-variables.md
 - name: Feature Upgrade
