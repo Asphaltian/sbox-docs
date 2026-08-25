@@ -209,6 +209,7 @@ In some shaders you may find such things as `BoolAttribute` and `TextureAttribut
 | alphatest | Indicates that shader has alpha test enabled. Can quickly access this flag in C# using `Flags.IsAlphaTest` |
 | sky | Indicates that this shader represents a skybox. Can quickly access this flag in C# using `Flags.IsSky` |
 | SupportsMappingDimensions | If set to **true**, Material Editor will add settings for world mapping in "Attributes" tab. May be useful if you are using Hammer. |
+| VertexNeedsPropOrigin | If true, all models that use this shader will be excluded from static-mesh aggregation. By default, all static meshes are merged together during a map build as an optimization, but using this attribute excludes related models from merging. If your shader uses per-instance object space position data for vertex displacement or other effects, you might want to use this attribute. |
 | bWantsFBCopyTexture | Indicates that scene object needs a copy of frame buffer texture. Must be set to **true** if you want to read frame buffer texture in your shader. |
 | NoZPrepass | If **true**, objects with your shader will opt out of Z prepass |
 | DoNotCastShadows | This should disable shadow rendering on given material, but I don't know if this still works. TODO |
