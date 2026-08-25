@@ -64,26 +64,24 @@ struct PixelInput
     #endif
     
     float3 vNormalWs 		: TEXCOORD1;
-    float2 vTextureCoords 	: TEXCOORD2;
+    float4 vTextureCoords 	: TEXCOORD2;
     float4 vVertexColor 	: TEXCOORD4;
-    
-    centroid float3 vCentroidNormalWs : TEXCOORD5; // For specular, used if interpolation sends normal outside the unit sphere
 
-  	float3 vTangentUWs : TEXCOORD6; 
-  	float3 vTangentVWs : TEXCOORD7; 
-    
+    #if ( PS_INPUT_HAS_TANGENT_BASIS )
+		float3 vTangentUWs : TEXCOORD6; 
+        float3 vTangentVWs : TEXCOORD7; 
+    #endif
+
     #if ( S_USE_PER_VERTEX_CURVATURE )
     	float flSSSCurvature : TEXCOORD11;
     #endif
-    
-    #if ( D_BAKED_LIGHTING_FROM_LIGHTMAP )
-    	centroid float2 vLightmapUV : TEXCOORD3;
-    #endif
-    
+
+    centroid float2 vLightmapUV : TEXCOORD3;
+
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------
     // System interpolants
     //-------------------------------------------------------------------------------------------------------------------------------------------------------------
-    
+
     #if ( PROGRAM != VFX_PROGRAM_PS ) 
     	float4 vPositionPs : SV_Position;
     #else // PS only
