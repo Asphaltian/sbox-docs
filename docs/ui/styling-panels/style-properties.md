@@ -2,7 +2,7 @@
 title: "Style Properties"
 icon: "🎨"
 created: 2024-09-24
-updated: 2026-03-23
+updated: 2026-08-27
 ---
 
 # Style Properties
@@ -41,6 +41,7 @@ These work across most properties:
 | aspect-ratio | Float, Float (Optional) / auto | `aspect-ratio: 1;`,`aspect-ratio: 16/9;`,`aspect-ratio: auto;` |
 | background-image-tint | Color      | Multiplies the `background-image` by this Color. Not a replacement for `filter` or `backdrop-filter`. |
 | border-image-tint | Color      | Multiplies the `border-image` by this Color. |
+| border-shape | none / polygon(x y, ...) / circle(radius at x y) | Replaces the rounded rectangle with a polygon (3-8 points) or a circle, for backgrounds, borders and hit testing. See [Border Shape](border-shape.md). |
 | mask-scope | default / filter | `default` will apply the mask normally, `filter` will use the mask to blend between unfiltered and filtered. |
 | sound-in | String     | The name of the sound to play when this style is applied to an element. This is useful to put on a `:hover` or `:active` style to play a sound on hover/click |
 | sound-out | String     | The name of a sound to play when this style is removed from an element. |

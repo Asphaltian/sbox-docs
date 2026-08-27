@@ -1,3 +1,5 @@
 items:
+- name: Border Shape
+  href: border-shape.md
 - name: Style Properties
   href: style-properties.md
