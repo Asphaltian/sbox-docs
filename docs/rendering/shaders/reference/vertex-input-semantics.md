@@ -7,14 +7,16 @@ updated: 2026-08-25
 
 # Vertex Input Semantics
 
-Most of the model data is fed to shaders through vertex input struct. Each field in this struct is bound to a specific HLSL register and also **Semantic**, that can be used by the model/renderer/map compiler to decide which data stream gets packed into a specific register. Some of this data comes from the model itself, some of it comes from the model compiler, or runtime values. Here's an example of a semantic being used in standard vertex input struct:
+Most of the model data is fed to shaders through vertex input struct. Each field in this struct is bound to a specific HLSL register and also **Semantic**, that can be used by the model/renderer/map compiler to decide which data stream gets packed into a specific register. 
+
+Some of this data comes from the model itself, some of it comes from the model compiler, or runtime values. Here's an example of a semantic being used in standard vertex input struct:
 
 ```cpp
 // Object-space vertex position, "POSITION" is a HLSL register and PosXyz is a semantic.
 float3 vPositionOs : POSITION < Semantic( PosXyz ); >;
 ```
 
-Semantics are not always necessary. You DO need them if your shader will be used on regular models (compiled with ModelDoc) or map geometry, but they might not be necessary if you're creating a procedural mesh. In these situations you will likely have your own vertex layout built, which should be enough to read vertex input data with just HLSL registers.
+Semantics are not always necessary, it is a s&box-specific thing and isn't native to HLSL after all. You DO need them if your shader will be used for regular models (compiled with ModelDoc) or map geometry, but they might not be necessary if you're creating a procedural mesh. In these situations you will likely have your own vertex layout built, which should be enough to read vertex input data with just HLSL registers.
 
 Here's a full list of all available semantics:
 
@@ -36,4 +38,3 @@ Here's a full list of all available semantics:
 | `PropWorldOrigin` | Not used by any shader | 
 | `nInstanceTransformID` | Instance ID of this mesh | 
 | `MorphIndex` | Morph data ID, used by skinned meshes |
-
