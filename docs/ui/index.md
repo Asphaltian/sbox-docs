@@ -69,6 +69,10 @@ public sealed class MyRootPanel : PanelComponent
 }
 ```
 
+# Custom Drawing
+
+Panels can also draw shapes, lines, text and images directly from code by overriding `OnDraw( Painter painter )`. See [Painter](painter/index.md).
+
 # Scaling
 
 By default, ScreenPanels will rescale all UI based on a 1080p target height automatically. If you wish to disable this, or change the scaling to target the Desktop Resolution, you can change the following:

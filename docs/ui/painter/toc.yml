@@ -1,0 +1,13 @@
+items:
+- name: Shapes
+  href: shapes.md
+- name: Fill & Stroke
+  href: fill-and-stroke.md
+- name: Text
+  href: text.md
+- name: Transforms & Clipping
+  href: state.md
+- name: Layers & Filters
+  href: layers.md
+- name: Destinations
+  href: destinations.md
