@@ -40,3 +40,20 @@ Here's a full list of all available semantics:
 | `PropWorldOrigin` | Not used by any shader | 
 | `nInstanceTransformID` | Instance ID of this mesh | 
 | `MorphIndex` | Morph data ID, used by skinned meshes |
+
+## More UV channels
+
+Compiled models support up to four UV channels, however if you are using default vertex/pixel input structs by default, you will have access only to first two UV channels, (UV0 and UV1) where second one is gated behind `S_UV2` combo unless you just write it to PixelInput struct manually. 
+
+To add UV2 and UV3 to your shader, you must add custom fields in your VertexInput struct, for example:
+
+```cpp
+VS
+{
+    // Adding fields for UV2/UV3 channels on top of standard vertex input
+    #include "common/vertexinput.hlsl"
+
+    float2 vTexCoord3 : TEXCOORD4 < Semantic( LowPrecisionUv2 ); >; 
+    float2 vTexCoord4 : TEXCOORD5 < Semantic( LowPrecisionUv3 ); >;
+}
+```
