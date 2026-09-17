@@ -7,7 +7,7 @@ updated: 2026-09-16
 
 # HudPainter
 
-> `HudPainter` is obsolete. It has been replaced by [Painter](painter/index.md), which does everything it did and much more.
+> `HudPainter` is obsolete. It has been replaced by [Painter](/ui/painter/index.md), which does everything it did and much more.
 
 `Camera.Hud` and `Camera.Overlay` used to give you a `HudPainter` with `DrawRect`, `DrawLine`, `DrawText` and `DrawTexture` methods. They still work for now, but you should switch to `BeginHud()` and `BeginOverlay()`, which give you a `Painter`.
 
@@ -56,4 +56,4 @@ protected override void OnUpdate()
 | `SetMatrix( matrix )` | `Transform = matrix;` or `Translate`, `Rotate`, `Scale` |
 | `SetBlendMode( mode )` | `BlendMode = mode;` |
 
-See [Destinations](painter/destinations.md) for the full guide to drawing on cameras.
+See [Destinations](/ui/painter/destinations.md) for the full guide to drawing on cameras.

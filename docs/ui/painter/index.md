@@ -18,7 +18,7 @@ You can paint onto:
 * A **texture**, to bake a drawing you can reuse.
 * A **command list**, to draw at any stage of rendering.
 
-See [Destinations](destinations.md) for each of these.
+See [Destinations](/ui/painter/destinations.md) for each of these.
 
 # A first drawing
 
@@ -94,9 +94,9 @@ Nothing is drawn unless there's a fill or a stroke. If you draw a shape and noth
 
 # Pages
 
-* [Shapes](shapes.md) - rectangles, circles, arcs, polygons, lines, curves and symbols.
-* [Fill & Stroke](fill-and-stroke.md) - solid colors, gradients, images, dashes, caps and joins.
-* [Text](text.md) - drawing and measuring text.
-* [Transforms & Clipping](state.md) - transforms, clipping, opacity, blend modes and scopes.
-* [Layers & Filters](layers.md) - group drawing for opacity, blur, masks and backdrop effects.
-* [Destinations](destinations.md) - panels, cameras, textures, command lists and 3D lines.
+* [Shapes](/ui/painter/shapes.md) - rectangles, circles, arcs, polygons, lines, curves and symbols.
+* [Fill & Stroke](/ui/painter/fill-and-stroke.md) - solid colors, gradients, images, dashes, caps and joins.
+* [Text](/ui/painter/text.md) - drawing and measuring text.
+* [Transforms & Clipping](/ui/painter/state.md) - transforms, clipping, opacity, blend modes and scopes.
+* [Layers & Filters](/ui/painter/layers.md) - group drawing for opacity, blur, masks and backdrop effects.
+* [Destinations](/ui/painter/destinations.md) - panels, cameras, textures, command lists and 3D lines.

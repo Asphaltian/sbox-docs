@@ -71,7 +71,7 @@ public sealed class MyRootPanel : PanelComponent
 
 # Custom Drawing
 
-Panels can also draw shapes, lines, text and images directly from code by overriding `OnDraw( Painter painter )`. See [Painter](painter/index.md).
+Panels can also draw shapes, lines, text and images directly from code by overriding `OnDraw( Painter painter )`. See [Painter](/ui/painter/index.md).
 
 # Scaling
 

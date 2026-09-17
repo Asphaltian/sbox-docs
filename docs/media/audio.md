@@ -9,7 +9,7 @@ updated: 2026-04-22
 
 ## MusicPlayer
 
-`MusicPlayer` is for music tracks and streaming audio that need programmatic control over playback, positioning, or visualization. For in-game sound effects and Sound components, see [Sound](../sound/index.md).
+`MusicPlayer` is for music tracks and streaming audio that need programmatic control over playback, positioning, or visualization. For in-game sound effects and Sound components, see [Sound](/sound/index.md).
 
 ```csharp
 var music = MusicPlayer.Play( FileSystem.Mounted, "music/theme.ogg" );

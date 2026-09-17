@@ -9,7 +9,7 @@ updated: 2026-04-22
 
 s&box supports video playback, audio streaming, music, voice chat, positional 3D audio, and video encoding.
 
-See [Video](./video.md) and [Audio](./audio.md) for more details.
+See [Video](/media/video.md) and [Audio](/media/audio.md) for more details.
 
 ## Codec & Format Support
 

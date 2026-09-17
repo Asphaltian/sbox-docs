@@ -7,7 +7,7 @@ updated: 2026-09-16
 
 # Shapes
 
-Every shape uses the current [Fill and Stroke](fill-and-stroke.md). Closed shapes are filled and then stroked around their edge. Open shapes like lines, arcs and curves only use the stroke.
+Every shape uses the current [Fill and Stroke](/ui/painter/fill-and-stroke.md). Closed shapes are filled and then stroked around their edge. Open shapes like lines, arcs and curves only use the stroke.
 
 All sizes are in drawing pixels. Angles are in degrees, clockwise, starting from the right.
 
@@ -129,7 +129,7 @@ A `Star` with zero spike length is a regular polygon. A `Capsule` with different
 
 # Images
 
-`Texture` draws a texture into a rectangle, ignoring the fill and stroke. For more control over tiling, sizing and offset, use an image [Fill](fill-and-stroke.md#images) with `Rect` instead.
+`Texture` draws a texture into a rectangle, ignoring the fill and stroke. For more control over tiling, sizing and offset, use an image [Fill](/ui/painter/fill-and-stroke.md#images) with `Rect` instead.
 
 ```csharp
 painter.Texture( texture, rect );

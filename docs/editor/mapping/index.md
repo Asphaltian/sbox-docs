@@ -24,7 +24,7 @@ In the top-left of the scene view is a mode dropdown. Click it and select **Mapp
 The toolbar is the hub for all mapping functions. From here you can create meshes, edit their geometry, texture surfaces and paint vertex colours. Everything you need to go from a blank scene to a finished level is accessible directly from this toolbar.
 
 :::info
-Many shortcuts in the mapping editor intentionally match Hammer, so if you have a background in Source engine mapping you should feel right at home. See the [Shortcuts](./shortcuts.md) page for a full reference.
+Many shortcuts in the mapping editor intentionally match Hammer, so if you have a background in Source engine mapping you should feel right at home. See the [Shortcuts](/editor/mapping/shortcuts.md) page for a full reference.
 
 :::
 
@@ -62,5 +62,5 @@ Once you have a selection, move modes control how you transform it. They are ava
 
 - Setting up your project? Follow [Games](https://sbox.game/learn/facepunch/map-project).
 - Ready to share your work? Follow [Publishing](https://sbox.game/learn/facepunch/map-publish).
-- Need keybinds while working? [Shortcuts](./shortcuts.md).
+- Need keybinds while working? [Shortcuts](/editor/mapping/shortcuts.md).
 - Looking for Tutorials? Follow [Tutorials](https://sbox.game/learn?topic=mapping).

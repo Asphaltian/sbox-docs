@@ -128,4 +128,4 @@ Open paths like lines and arcs are always centered.
 
 # Outlines and shadows
 
-`Outline` strokes around a rectangle without filling it, offset inward or outward. `RectShadow` draws a blurred shadow. Both are covered in [Shapes](shapes.md#rectangles).
+`Outline` strokes around a rectangle without filling it, offset inward or outward. `RectShadow` draws a blurred shadow. Both are covered in [Shapes](/ui/painter/shapes.md#rectangles).

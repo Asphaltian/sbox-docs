@@ -68,7 +68,7 @@ painter.BlendMode = BlendMode.Multiply;
 | `Lighten` | Keeps the lighter of the two colors. |
 | `PremultipliedAlpha` | For textures with premultiplied alpha. |
 
-On panels, `Opacity` stacks with the panel's CSS `opacity`. To fade a group of overlapping shapes as one, without the overlap showing through, use a [layer](layers.md) instead.
+On panels, `Opacity` stacks with the panel's CSS `opacity`. To fade a group of overlapping shapes as one, without the overlap showing through, use a [layer](/ui/painter/layers.md) instead.
 
 # Scopes
 
