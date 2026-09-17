@@ -9,7 +9,7 @@ updated: 2025-09-05
 
 ## How do I get it?
 
-[s&box is available on Steam](https://store.steampowered.com/app/590830/sbox/) for $20.
+[s&box is available on Steam](https://store.steampowered.com/app/590830/sbox/) for $10.
 
 ## Are you using workshop?
 
