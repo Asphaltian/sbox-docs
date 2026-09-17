@@ -21,3 +21,5 @@ items:
   href: sampler-states.md
 - name: Shading Model
   href: shading-model.md
+- name: Terrain
+  href: terrain.md
