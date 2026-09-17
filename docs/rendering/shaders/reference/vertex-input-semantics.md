@@ -2,7 +2,7 @@
 title: "Vertex Input Semantics"
 icon: "🖨️"
 created: 2026-08-25
-updated: 2026-08-25
+updated: 2026-09-17
 ---
 
 # Vertex Input Semantics
@@ -27,6 +27,8 @@ Here's a full list of all available semantics:
 | `OptionallyCompressedTangentFrame` | Compressed normal + tangent, used by standard vertex input struct |
 | `LowPrecisionUv` | UV0 channel of the mesh | 
 | `LowPrecisionUv1` | UV1 channel of the mesh |
+| `LowPrecisionUv2` | UV2 channel of the mesh |
+| `LowPrecisionUv3` | UV3 channel of the mesh |
 | `TangentU_SignV` | Tangent basis. This data won't be passed to model if it uses normal+tangent compression (which is enabled by default), will become available only if model is explicitly using uncompressed vertices (can be triggered by "Use Expensive Tangents" render markup in ModelDoc) |
 | `Color` | Vertex color |
 | `BlendWeight` | Used by skinned meshes |
