@@ -5,6 +5,8 @@ items:
   href: vertex-input-semantics.md
 - name: Global Variables
   href: global-variables.md
+- name: Specialization Constants
+  href: specialization-constants.md
 - name: Feature Upgrade
   href: feature-upgrade.md
 - name: Screen-Space Reflections
