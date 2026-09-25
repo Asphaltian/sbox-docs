@@ -2,7 +2,7 @@
 title: "S&box Documentation"
 icon: "🍌"
 created: 2023-10-26
-updated: 2026-02-27
+updated: 2026-09-25
 ---
 
 # S&box Documentation
@@ -19,9 +19,9 @@ We have developed a hotload system which is capable of compiling & hotloading yo
 
 We use a scene system, similar to Godot and Unity. This allows faster iteration, without everything being code-based. The scene system aims to make how everything works more transparent, by being easily visible, and easily accessible.
 
-# Future
+# Standalone Games
 
-Our intention is to let you export the things that you make in our engine and release them standalone. We'll let you do this royalty-free.
+You can export your game as a standalone executable. Standalone distribution is currently in preview and requires Valve's approval and a license from Facepunch. Facepunch takes no engine royalties or revenue share; Steam's standard terms and revenue share still apply. See [Exporting Standalone](/exporting/index.md) for the approval process and release requirements.
 
 ## Reporting Issues
 

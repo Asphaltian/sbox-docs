@@ -2,7 +2,7 @@
 title: "Getting Started"
 icon: "🚀"
 created: 2025-06-15
-updated: 2026-04-09
+updated: 2026-09-25
 ---
 
 # Getting Started
@@ -13,7 +13,7 @@ We use a scene system, similar to Godot and Unity. This allows faster iteration,
 
 We have developed a hotload system which is capable of compiling & hotloading your changes to code within a few milliseconds, which negates the need for a scripting language.
 
-Our intention is to let you export the things that you make in our engine and release them standalone. We'll let you do this royalty-free.
+You can export your game as a standalone executable. Standalone distribution is currently in preview and requires Valve's approval and a license from Facepunch. Facepunch takes no engine royalties or revenue share; Steam's standard terms and revenue share still apply. See [Exporting Standalone](/exporting/index.md) for the approval process and release requirements.
 
 ---
 
