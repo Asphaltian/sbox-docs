@@ -34,6 +34,12 @@ Right now, we have to show your game to Valve for individual approval. In our op
 
 Approval is not automatic. Wait until you have Valve's approval and a standalone license from Facepunch before distributing exported builds, on Steam or anywhere else.
 
+## Does My Game Have to Be on s&box?
+
+No. Your game does not have to be published on the s&box platform at any point. You can use the engine to develop directly for standalone release. If your game is already on the platform, you do not have to keep it there after releasing standalone.
+
+We hope you'll find it beneficial to make your game available on s&box, but that's your choice. It's your game.
+
 ## Player Models and Clothing
 
 You must replace the default Citizen player models, including the sausage and human models, and Citizen clothing with your own assets before shipping a standalone game.
