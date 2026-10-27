@@ -15,10 +15,6 @@ You'll find the option in **Project Settings > Publishing**, and in the **Review
 
 ![](./images/publishing-settings.png)
 
-:::info
-New projects have this enabled by default. Existing projects keep publishing all assets until you enable it.
-:::
-
 ### What gets included
 
 These are included automatically, along with everything they reference directly or indirectly:
@@ -53,19 +49,12 @@ Click **Include** on a warning to add its suggested rule, or **Add recommended**
 
 ### Resource Files rules
 
-Rules are matched in order and the last matching rule wins. An ordinary path or wildcard includes; prefix it with `!` to exclude.
+Rules work similar to a `.gitignore`, except a plain path includes and `!` excludes.
 
 ```text
+# every scene except dev and test scenes, but keep the tutorial
 scenes/*.scene
 !scenes/dev*.scene
 !scenes/tests/
 scenes/dev_tutorial.scene
 ```
-
-This includes every scene except dev and test scenes, then adds the tutorial back.
-
-* `*` and `?` are wildcards, and `*` can span folders
-* A trailing `/` matches a folder's contents
-* `#` and `//` start comment lines
-
-Exclusions only apply to Resource Files rules. Configured scenes, the `Resources/` folder and dependencies of included assets still ship. The preview lists anything that is **Required despite exclusions**, along with the reason.
