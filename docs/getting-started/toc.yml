@@ -9,6 +9,8 @@ items:
   href: explore-engine.md
 - name: Project Types
   href: project-types/
+- name: Publishing
+  href: publishing.md
 - name: Monetization
   href: monetization.md
 - name: Reporting Errors
